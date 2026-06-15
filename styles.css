@@ -1,4 +1,4 @@
-/* ===== Lost & Found Desk — Portfolio ===== */
+/* ===== Suitcase Portfolio ===== */
 
 * {
     margin: 0;
@@ -42,57 +42,58 @@ body {
     flex-direction: column;
 }
 
-/* ===== Header / Sign ===== */
+/* ===== Header / Suitcase Handle ===== */
 .desk-header {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 8px;
 }
 
-.sign-board {
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-    background: linear-gradient(180deg, #2a2520 0%, #1a1612 100%);
-    border: 2px solid #4a4035;
-    border-radius: 6px;
-    padding: 14px 36px;
+.suitcase-handle {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0 auto 6px;
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+}
+
+.handle-mount {
+    width: 11px;
+    height: 16px;
+    background: linear-gradient(90deg, #8b6914 0%, #d4af37 45%, #f0d878 55%, #b8942e 100%);
+    border-radius: 4px 4px 0 0;
     box-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        inset 0 1px 3px rgba(255, 255, 255, 0.45),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.handle-arc {
+    width: 136px;
+    height: 40px;
+    margin: 0 -2px;
+    border: 10px solid #c9a227;
+    border-bottom: none;
+    border-radius: 68px 68px 0 0;
+    background: transparent;
+    box-shadow:
+        inset 0 5px 10px rgba(255, 255, 255, 0.3),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
-.sign-board h1 {
-    font-family: 'Special Elite', 'Courier New', monospace;
-    font-size: clamp(1.6rem, 4vw, 2.4rem);
-    letter-spacing: 0.15em;
-    color: #f5e6c8;
-    text-shadow: 0 0 20px rgba(255, 183, 77, 0.3);
-}
-
-.sign-bulb {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #ffb74d;
-    box-shadow: 0 0 12px #ffb74d, 0 0 24px rgba(255, 183, 77, 0.5);
-    animation: bulbFlicker 4s ease-in-out infinite;
-}
-
-.sign-bulb.right {
-    animation-delay: 2s;
-}
-
-@keyframes bulbFlicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.85; }
-    52% { opacity: 1; }
-    54% { opacity: 0.7; }
-    56% { opacity: 1; }
+.handle-arc::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    height: 20px;
+    border-radius: 68px 68px 0 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, transparent 100%);
+    pointer-events: none;
 }
 
 .desk-subtitle {
-    margin-top: 16px;
+    margin-top: 12px;
     color: #a89f94;
     font-size: 0.95rem;
     letter-spacing: 0.05em;
@@ -1339,13 +1340,16 @@ body {
         padding: 24px 12px 40px;
     }
 
-    .sign-board {
-        padding: 10px 20px;
+    .handle-arc {
+        width: 110px;
+        height: 34px;
+        border-width: 8px;
+        border-radius: 55px 55px 0 0;
     }
 
-    .sign-board h1 {
-        font-size: 1.3rem;
-        letter-spacing: 0.1em;
+    .handle-mount {
+        width: 9px;
+        height: 14px;
     }
 
     .passport-cover { width: 76px; height: 104px; }

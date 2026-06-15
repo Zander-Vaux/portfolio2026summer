@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foot-Operated Fridge Opener — Engineering Drawing</title>
+    <link rel="stylesheet" href="../engineering.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body class="eng-doc">
+    <a href="../index.html?modal=engineering" class="eng-back">← Blueprint Sheet</a>
+
+    <div class="eng-sheet">
+        <header class="eng-title-block">
+            <div class="eng-drawing-no">DWG-FRD-001</div>
+            <div class="eng-meta">Accessible Design · Solidworks · Berkeley</div>
+            <h1>FOOT-OPERATED FRIDGE OPENER</h1>
+            <div class="eng-revision">
+                <span>SCALE: 1:4</span>
+                <span>REV: B</span>
+                <span>AUTHOR: Z. Vaux</span>
+            </div>
+        </header>
+
+        <div class="eng-layout">
+            <nav class="eng-toc" aria-label="Table of contents">
+                <h2>INDEX</h2>
+                <ol>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#problem">Problem Statement</a></li>
+                    <li><a href="#mechanism">Mechanism Design</a></li>
+                    <li><a href="#cad">CAD &amp; Tolerancing</a></li>
+                    <li><a href="#dfm">DFM &amp; Cost</a></li>
+                </ol>
+                <a href="../presentations/Fridge-Opener-Report.pdf" target="_blank" rel="noopener" class="eng-pdf-link">↓ Full Report (PDF)</a>
+            </nav>
+
+            <main class="eng-body">
+                <section id="overview" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§01</span>
+                        <h2>OVERVIEW</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Accessible foot-operated refrigerator door opener designed for users with limited hand mobility. Engineered for mass manufacturing at approximately half the cost of existing commercial solutions while maintaining ergonomic usability.</p>
+                        <div class="eng-tags">
+                            <span class="eng-tag">Solidworks</span>
+                            <span class="eng-tag">3D Printing</span>
+                            <span class="eng-tag">GD&amp;T</span>
+                            <span class="eng-tag">DFM</span>
+                            <span class="eng-tag">Accessibility</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="problem" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§02</span>
+                        <h2>PROBLEM STATEMENT</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Standard refrigerator handles require grip strength and wrist rotation that many users with mobility limitations cannot perform. Existing assistive openers are expensive and often poorly integrated with common fridge geometries.</p>
+                        <p><strong>Design goal:</strong> A foot-pedal actuated mechanism that pulls the door open via a hinged arm, mountable to standard refrigerator frames without permanent modification.</p>
+                    </div>
+                </section>
+
+                <section id="mechanism" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§03</span>
+                        <h2>MECHANISM DESIGN</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Hinged lever arm transfers foot-pedal force to a door-grip assembly. Barrel hinge with contrasting pin allows smooth rotation. Bolt-and-nut fastening secures the grip to varied door handle geometries.</p>
+                        <figure class="eng-integrated-figure" style="max-width: 520px; margin: 20px auto;">
+                            <div class="eng-figure-media">
+                                <img src="../images/projects/fridge-opener-crop.png" alt="Foot-operated fridge opener prototype mechanism">
+                            </div>
+                            <figcaption>FIG 1 — PROTOTYPE ASSEMBLY · HINGE + PEDAL MECHANISM</figcaption>
+                        </figure>
+                        <table class="eng-spec-table">
+                            <thead>
+                                <tr><th>COMPONENT</th><th>MATERIAL</th><th>FUNCTION</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Frame plates</td><td>3D-printed polymer</td><td>Structural support, mount to fridge</td></tr>
+                                <tr><td>Hinge assembly</td><td>Polymer + metal pin</td><td>Convert pedal force to pull motion</td></tr>
+                                <tr><td>Door grip</td><td>Polymer + bolt</td><td>Attach to handle, transfer opening force</td></tr>
+                                <tr><td>Pedal arm</td><td>Polymer</td><td>Foot-actuated input</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="cad" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§04</span>
+                        <h2>CAD &amp; TOLERANCING</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Full assembly modeled in Solidworks with GD&amp;T specifications for hinge clearance, pedal travel, and grip fit tolerances. Iterative prototyping via 3D printing validated fit before finalizing tolerances for injection molding.</p>
+                        <ul>
+                            <li>Assembly mates for hinge rotation range of motion</li>
+                            <li>Clearance fits for bolt-through grip attachment</li>
+                            <li>Wall thickness optimized for printability and strength</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="dfm" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§05</span>
+                        <h2>DFM &amp; COST</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Design for manufacturing analysis targeted injection molding with minimal part count. Simplified geometry and standard fasteners reduce tooling cost. Final design achieves ~50% cost reduction vs. leading competitor while meeting accessibility requirements.</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../engineering.js"></script>
+</body>
+</html>

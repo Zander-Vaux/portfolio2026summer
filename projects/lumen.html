@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Lumen: Engineering Drawing</title>
+    <link rel="stylesheet" href="../engineering.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body class="eng-doc">
+    <a href="../index.html?modal=engineering" class="eng-back">← Blueprint Sheet</a>
+
+    <div class="eng-sheet">
+        <header class="eng-title-block">
+            <div class="eng-drawing-no">DWG-LMN-001</div>
+            <div class="eng-meta">ME 100 · IoT · UC Berkeley</div>
+            <h1>PROJECT LUMEN</h1>
+            <div class="eng-revision">
+                <span>SCALE: NTS</span>
+                <span>REV: A</span>
+                <span>AUTHORS: Nguyen · Francisco · Vaux</span>
+            </div>
+        </header>
+
+        <div class="eng-layout">
+            <nav class="eng-toc" aria-label="Table of contents">
+                <h2>INDEX</h2>
+                <ol>
+                    <li><a href="#summary">Summary</a></li>
+                    <li><a href="#problem">Problem &amp; Solution</a></li>
+                    <li><a href="#architecture">System Architecture</a></li>
+                    <li><a href="#prototypes">Prototypes</a></li>
+                    <li><a href="#sensors">Sensors &amp; Actuators</a></li>
+                    <li><a href="#schematics">Schematics</a></li>
+                    <li><a href="#firmware">Firmware Overview</a></li>
+                    <li><a href="#app">Companion App</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+                <a href="../presentations/LUMEN.pdf" target="_blank" rel="noopener" class="eng-pdf-link">↓ Full Report (PDF)</a>
+            </nav>
+
+            <main class="eng-body">
+                <section id="summary" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§01</span>
+                        <h2>SUMMARY</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Project Lumen is a smartwatch-integrated self-reflection band built for college students and young adults. It pairs real-time heart rate monitoring with intentional emotional check-ins, detecting stress through biometrics and prompting reflection through haptic alerts and a companion mobile app.</p>
+                        <p>Unlike productivity-focused wearables, Lumen prioritizes emotional health and self-awareness, positioning itself in the growing biometric wellness market.</p>
+                        <div class="eng-tags">
+                            <span class="eng-tag">ESP32</span>
+                            <span class="eng-tag">IoT</span>
+                            <span class="eng-tag">Biometrics</span>
+                            <span class="eng-tag">Wellness</span>
+                            <span class="eng-tag">React</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="problem" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§02</span>
+                        <h2>PROBLEM &amp; SOLUTION</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <div class="eng-callout">
+                            <strong>PROBLEM</strong>
+                            College students are increasingly detached from their emotional well-being. Productivity tools maximize efficiency but don't help users understand how they're feeling in the moment.
+                        </div>
+                        <div class="eng-callout">
+                            <strong>INITIAL CONCEPT</strong>
+                            Microphone + heart rate sensor + GPS + display + vibration motor + buzzer, all on ESP32.
+                        </div>
+                        <div class="eng-callout">
+                            <strong>FINAL DESIGN</strong>
+                            After design review, the microphone was replaced with an ultrasonic proximity sensor (ESP32 memory limits). The ultrasonic sensor wakes the countertop display when the user approaches, showing BPM, spike count, and GPS location.
+                        </div>
+                    </div>
+                </section>
+
+                <section id="architecture" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§03</span>
+                        <h2>SYSTEM ARCHITECTURE</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Three hardware subsystems communicate wirelessly via ESP-NOW, with a React companion app receiving data through a backend API.</p>
+                        <div class="eng-flow">
+                            <span class="eng-flow-box">WRISTBAND<br>HR + GPS</span>
+                            <span class="eng-flow-arrow">→</span>
+                            <span class="eng-flow-box">ESP-NOW</span>
+                            <span class="eng-flow-arrow">→</span>
+                            <span class="eng-flow-box">BUDDY GEORGE<br>Display + Buzzer</span>
+                        </div>
+                        <div class="eng-flow">
+                            <span class="eng-flow-box">WRISTBAND</span>
+                            <span class="eng-flow-arrow">→</span>
+                            <span class="eng-flow-box">VIBRATION MOTOR<br>Haptic alert</span>
+                        </div>
+                        <div class="eng-flow">
+                            <span class="eng-flow-box">BUDDY GEORGE</span>
+                            <span class="eng-flow-arrow">→</span>
+                            <span class="eng-flow-box">REST API</span>
+                            <span class="eng-flow-arrow">→</span>
+                            <span class="eng-flow-box">REACT APP</span>
+                        </div>
+                        <table class="eng-spec-table">
+                            <thead>
+                                <tr><th>SUBSYSTEM</th><th>FUNCTION</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Wristband (Sender)</td><td>Monitor BPM, detect spikes, capture GPS coordinates</td></tr>
+                                <tr><td>Buddy George (Receiver)</td><td>Display stats, guide breathing, forward data to app</td></tr>
+                                <tr><td>Vibration Motor (Receiver)</td><td>Haptic pulse when a new heart-rate spike is detected</td></tr>
+                                <tr><td>Companion App</td><td>Dashboard, journaling, mood tracking, friends</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="prototypes" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§04</span>
+                        <h2>PROTOTYPES</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Two-component hardware prototype: a wearable wristband for biometric sensing and a countertop reflection hub.</p>
+                        <div class="eng-figure-duo">
+                            <figure class="eng-integrated-figure">
+                                <div class="eng-figure-media">
+                                    <img src="../images/projects/lumen/wristband-prototype.png" alt="Lumen wristband prototype on arm with ESP32, heart-rate sensor, GPS">
+                                </div>
+                                <figcaption>FIG 1a: WRISTBAND · HR + GPS SENDER</figcaption>
+                            </figure>
+                            <figure class="eng-integrated-figure">
+                                <div class="eng-figure-media">
+                                    <img src="../images/projects/lumen/buddy-george-prototype.png" alt="Buddy George reflection hub with ultrasonic sensor and OLED display">
+                                </div>
+                                <figcaption>FIG 1b: BUDDY GEORGE · REFLECTION HUB</figcaption>
+                            </figure>
+                        </div>
+                        <ul>
+                            <li><strong>Wristband:</strong> MAX30102 heart-rate sensor and NEO-6M GPS on ESP32, with vibration motor for haptic spike alerts</li>
+                            <li><strong>Buddy George:</strong> US-015 ultrasonic sensor, OLED display, and piezo buzzer for proximity wake + breathing guidance</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="sensors" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§05</span>
+                        <h2>SENSORS &amp; ACTUATORS</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <div class="eng-components">
+                            <div class="eng-component">
+                                <h4>MAX30102</h4>
+                                <p>Optical heart-rate sensor (I2C). Detects blood-volume changes and logs spike events above 95 BPM.</p>
+                            </div>
+                            <div class="eng-component">
+                                <h4>NEO-6M GPS</h4>
+                                <p>Associates each spike with a physical location. Custom parser extracts lat/lon with PST timestamps.</p>
+                            </div>
+                            <div class="eng-component">
+                                <h4>HC-SR04 Ultrasonic</h4>
+                                <p>Non-contact wake on Buddy George. Activates the OLED and breathing routine when user is within ~20 cm.</p>
+                            </div>
+                            <div class="eng-component">
+                                <h4>SSD1306 OLED</h4>
+                                <p>128×64 display on the reflection hub showing BPM, spike count, and GPS coordinates.</p>
+                            </div>
+                            <div class="eng-component">
+                                <h4>Piezo Buzzer</h4>
+                                <p>Audio-guided breathing with a higher tone for inhale (800 Hz) and a lower tone for exhale (550 Hz).</p>
+                            </div>
+                            <div class="eng-component">
+                                <h4>DC Vibration Motor</h4>
+                                <p>5-second haptic pulse on the wristband whenever a new spike is detected.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="schematics" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§06</span>
+                        <h2>SCHEMATICS</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Wristband sender and Buddy George receiver wiring diagrams.</p>
+                        <div class="eng-drawing-stack eng-drawing-stack--blueprint">
+                            <figure class="eng-drawing-panel eng-drawing-panel--blueprint">
+                                <img src="../images/projects/lumen/sender-schematic.png" alt="Sender schematic with ESP32, MAX30102 heart-rate sensor, NEO-6M GPS">
+                                <figcaption>FIG 2: SENDER · HR SENSOR + GPS</figcaption>
+                            </figure>
+                            <figure class="eng-drawing-panel eng-drawing-panel--blueprint">
+                                <img src="../images/projects/lumen/receiver-schematic-v2.png" alt="Receiver schematic with ESP32, ultrasonic sensor, OLED, op-amp, speaker">
+                                <figcaption>FIG 3: RECEIVER · ULTRASONIC + OLED + BUZZER</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="firmware" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§07</span>
+                        <h2>FIRMWARE OVERVIEW</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>All firmware written in MicroPython on ESP32. Three separate programs run on the sender and two receivers.</p>
+                        <table class="eng-spec-table">
+                            <thead>
+                                <tr><th>MODULE</th><th>ROLE</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Sender (Wristband)</td><td>Reads heart rate and GPS, detects spikes, broadcasts data packet via ESP-NOW every 200 ms</td></tr>
+                                <tr><td>Motor Receiver</td><td>Listens for spike count increases and triggers a 5-second vibration</td></tr>
+                                <tr><td>Buddy George Receiver</td><td>Displays stats when user approaches, runs breathing cycle, POSTs data to backend API</td></tr>
+                            </tbody>
+                        </table>
+                        <p style="margin-top: 14px;">Data is transmitted as a simple text packet: BPM, spike count, and GPS coordinates, sent simultaneously to both receivers.</p>
+                    </div>
+                </section>
+
+                <section id="app" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§08</span>
+                        <h2>COMPANION APP</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>React app that turns ESP32 biometric + GPS data into a calm reflection experience with dashboard, journaling, and community features.</p>
+
+                        <div class="eng-phone-trio">
+                            <figure class="eng-phone-frame">
+                                <div class="eng-phone-crop eng-phone-crop--dashboard" role="img" aria-label="Lumen app dashboard with heart rate and spike count"></div>
+                                <figcaption>DASHBOARD</figcaption>
+                            </figure>
+                            <figure class="eng-phone-frame">
+                                <div class="eng-phone-crop eng-phone-crop--journal" role="img" aria-label="Lumen journal entry form with tags and location"></div>
+                                <figcaption>JOURNAL ENTRY</figcaption>
+                            </figure>
+                            <figure class="eng-phone-frame">
+                                <div class="eng-phone-crop eng-phone-crop--friends" role="img" aria-label="Lumen friends and profile view"></div>
+                                <figcaption>FRIENDS</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="eng-components" style="margin-top: 8px;">
+                            <div class="eng-component">
+                                <h4>Dashboard</h4>
+                                <p>Live BPM, spike count, and geocoded location (e.g. "Hesse Hall, UC Berkeley"). One-tap "Reflect on this entry" prompts journaling.</p>
+                            </div>
+                            <div class="eng-component">
+                                <h4>Journal Entry</h4>
+                                <p>Reflection form tied to ESP32 spike events with free-text insights, auto-filled location, and quick tags (school, stress, gratitude, etc.).</p>
+                            </div>
+                            <div class="eng-component">
+                                <h4>Friends &amp; Profile</h4>
+                                <p>Track entries, spikes, and connections. Community feature to share reflection journeys with trusted friends.</p>
+                            </div>
+                            <div class="eng-component">
+                                <h4>Heart Rate Chart</h4>
+                                <p>Color-coded spike visualization for normal, elevated, and high readings, with location and timestamp on hover.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="conclusion" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§09</span>
+                        <h2>CONCLUSION</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Project Lumen integrated hardware, firmware, and software into a cohesive wearable system that monitors physiological signals, detects stress events, and presents data through both a physical reflection hub and a mobile app.</p>
+                        <p>The prototype demonstrates how embedded sensing, wireless communication, and thoughtful interface design can support emotional well-being. Future iterations could improve battery life, enclosure design, and sensor robustness.</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../engineering.js"></script>
+</body>
+</html>

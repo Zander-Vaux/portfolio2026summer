@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI DJ Copilot — Engineering Drawing</title>
+    <link rel="stylesheet" href="../engineering.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body class="eng-doc">
+    <a href="../index.html?modal=engineering" class="eng-back">← Blueprint Sheet</a>
+
+    <div class="eng-sheet">
+        <header class="eng-title-block">
+            <div class="eng-drawing-no">DWG-DJ-001</div>
+            <div class="eng-meta">Tribe XR · Next.js · OpenAI</div>
+            <h1>AI DJ COPILOT</h1>
+            <div class="eng-revision">
+                <span>SCALE: NTS</span>
+                <span>REV: A</span>
+                <span>AUTHOR: Z. Vaux</span>
+            </div>
+        </header>
+
+        <div class="eng-layout">
+            <nav class="eng-toc" aria-label="Table of contents">
+                <h2>INDEX</h2>
+                <ol>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#architecture">Architecture</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                </ol>
+                <a href="https://dj.tribexr.com/ddj-flx4" target="_blank" rel="noopener" class="eng-pdf-link">↓ Live Product</a>
+            </nav>
+
+            <main class="eng-body">
+                <section id="overview" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§01</span>
+                        <h2>OVERVIEW</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>AI-powered DJ mentor integrated into the Tribe XR web deck. Delivers personalized lessons and real-time feedback using OpenAI API, helping beginners learn mixing on virtual and hardware controllers.</p>
+                        <div class="eng-tags">
+                            <span class="eng-tag">AI</span>
+                            <span class="eng-tag">Next.js</span>
+                            <span class="eng-tag">OpenAI API</span>
+                            <span class="eng-tag">Figma</span>
+                            <span class="eng-tag">UI/UX</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="architecture" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§02</span>
+                        <h2>ARCHITECTURE</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <div class="eng-flow">
+                            <span class="eng-flow-box">WEB DECK<br>Next.js</span>
+                            <span class="eng-flow-arrow">→</span>
+                            <span class="eng-flow-box">COPILOT UI<br>Figma → Code</span>
+                            <span class="eng-flow-arrow">→</span>
+                            <span class="eng-flow-box">OpenAI API<br>Lesson engine</span>
+                        </div>
+                        <p>Frontend built in Next.js with real-time deck state passed to the copilot for contextual feedback. UI designed in Figma and implemented with responsive layout for DDJ-FLX4 controller integration.</p>
+                    </div>
+                </section>
+
+                <section id="features" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§03</span>
+                        <h2>KEY FEATURES</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <ul>
+                            <li>Personalized lesson paths based on skill level and mixing goals</li>
+                            <li>Real-time feedback on transitions, beatmatching, and effects usage</li>
+                            <li>Context-aware coaching tied to live deck state</li>
+                            <li>Non-intrusive overlay that doesn't obstruct the mixing interface</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="impact" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§04</span>
+                        <h2>IMPACT</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Launched on the Tribe XR web deck and scaled to 3,000+ monthly active users. Secured adoption by AlphaTheta (Pioneer DJ parent company), integrating the copilot into their global DJ education ecosystem.</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../engineering.js"></script>
+</body>
+</html>

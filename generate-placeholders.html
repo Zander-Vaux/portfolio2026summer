@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Placeholder Images</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .placeholder { margin: 20px; display: inline-block; }
+        canvas { border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Placeholder Images</h1>
+    <p>Right-click each image and "Save image as..." to save them to the images folder.</p>
+    
+    <div class="placeholder">
+        <h3>Profile Image (120x120)</h3>
+        <canvas id="profile" width="120" height="120"></canvas>
+    </div>
+    
+    <div class="placeholder">
+        <h3>About Image (400x300)</h3>
+        <canvas id="about" width="400" height="300"></canvas>
+    </div>
+    
+    <div class="placeholder">
+        <h3>Hobbies Image (400x300)</h3>
+        <canvas id="hobbies" width="400" height="300"></canvas>
+    </div>
+
+    <script>
+        function createPlaceholder(canvasId, width, height, text, bgColor = '#1a1a1a', textColor = '#ffffff') {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, width, height);
+            
+            // Text
+            ctx.fillStyle = textColor;
+            ctx.font = `${Math.min(width, height) * 0.1}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(text, width / 2, height / 2);
+            
+            // Border
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(0, 0, width, height);
+        }
+        
+        // Generate placeholders
+        createPlaceholder('profile', 120, 120, 'Zander', '#1a1a1a', '#007bff');
+        createPlaceholder('about', 400, 300, 'About Me', '#1a1a1a', '#ffffff');
+        createPlaceholder('hobbies', 400, 300, 'Hobbies', '#1a1a1a', '#00d4ff');
+    </script>
+</body>
+</html>
+
+
+
+

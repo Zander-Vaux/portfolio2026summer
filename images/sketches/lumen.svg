@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="0.85" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Forearm (isometric) -->
+  <path d="M28 148 C48 138 68 142 88 136 C108 130 128 134 148 128"/>
+  <path d="M32 156 C52 146 72 150 92 144 C112 138 132 142 152 136"/>
+  <line x1="28" y1="148" x2="32" y2="156"/>
+  <line x1="148" y1="128" x2="152" y2="136"/>
+
+  <!-- Arm cross-hatch -->
+  <line x1="44" y1="150" x2="52" y2="142" opacity="0.2"/>
+  <line x1="56" y1="148" x2="64" y2="140" opacity="0.2"/>
+  <line x1="68" y1="146" x2="76" y2="138" opacity="0.2"/>
+  <line x1="80" y1="144" x2="88" y2="136" opacity="0.2"/>
+  <line x1="92" y1="142" x2="100" y2="134" opacity="0.2"/>
+  <line x1="104" y1="140" x2="112" y2="132" opacity="0.2"/>
+
+  <!-- Strap band -->
+  <path d="M58 132 L58 118 L118 108 L118 122 Z"/>
+  <path d="M58 118 L118 108 L118 122 L58 132 Z"/>
+  <line x1="58" y1="118" x2="118" y2="108"/>
+  <rect x="82" y="112" width="12" height="10" rx="1"/>
+
+  <!-- Device module -->
+  <path d="M68 122 L68 98 L104 90 L104 114 Z"/>
+  <path d="M68 98 L104 90 L104 114 L68 122 Z"/>
+  <line x1="68" y1="98" x2="104" y2="90"/>
+  <rect x="76" y="102" width="20" height="12" rx="1"/>
+  <line x1="78" y1="106" x2="94" y2="106" opacity="0.4"/>
+  <line x1="78" y1="110" x2="90" y2="110" opacity="0.4"/>
+
+  <!-- Wires -->
+  <path d="M104 106 C112 112 114 122 108 132"/>
+  <path d="M104 110 C110 116 112 126 106 136"/>
+  <path d="M104 114 C108 120 110 128 104 138" opacity="0.55"/>
+
+  <!-- Screen highlight -->
+  <line x1="80" y1="104" x2="92" y2="104" opacity="0.35"/>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="0.85" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Base plate -->
+  <path d="M30 148 L100 182 L170 148 L100 114 Z" opacity="0.35"/>
+  <path d="M30 148 L100 182 L170 148 L100 114 Z"/>
+
+  <!-- Main frame box -->
+  <path d="M72 148 L72 88 L128 72 L128 132 Z"/>
+  <path d="M72 88 L128 72 L128 132 L72 148 Z"/>
+  <line x1="72" y1="88" x2="128" y2="72"/>
+  <line x1="128" y1="72" x2="128" y2="132"/>
+  <line x1="128" y1="132" x2="72" y2="148"/>
+  <line x1="72" y1="148" x2="72" y2="88"/>
+
+  <!-- Internal brace -->
+  <line x1="78" y1="130" x2="118" y2="82" opacity="0.45" stroke-dasharray="2 2"/>
+
+  <!-- Hinged pedal plate -->
+  <path d="M34 148 L34 118 L68 104 L68 134 Z"/>
+  <line x1="34" y1="118" x2="68" y2="104"/>
+
+  <!-- Hinge barrel -->
+  <ellipse cx="68" cy="118" rx="5" ry="3" transform="rotate(-30 68 118)"/>
+  <line x1="65" y1="116" x2="71" y2="120" opacity="0.5"/>
+
+  <!-- Bolt shaft -->
+  <line x1="100" y1="108" x2="158" y2="88" stroke-width="1.1"/>
+  <line x1="154" y1="86" x2="162" y2="90" stroke-width="0.7"/>
+
+  <!-- Washer / flange -->
+  <ellipse cx="102" cy="106" rx="14" ry="5" transform="rotate(-15 102 106)"/>
+  <ellipse cx="102" cy="106" rx="8" ry="3" transform="rotate(-15 102 106)" opacity="0.4"/>
+
+  <!-- Plunger cone -->
+  <path d="M94 104 L100 94 L106 104 L100 110 Z" fill="rgba(126,200,255,0.15)"/>
+
+  <!-- Foot lever -->
+  <path d="M24 158 L54 158 L54 148 L24 148 Z"/>
+  <line x1="39" y1="148" x2="39" y2="134"/>
+</svg>

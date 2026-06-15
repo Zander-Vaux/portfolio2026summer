@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Windfrey — Engineering Drawing</title>
+    <link rel="stylesheet" href="../engineering.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body class="eng-doc">
+    <a href="../index.html?modal=engineering" class="eng-back">← Blueprint Sheet</a>
+
+    <div class="eng-sheet">
+        <header class="eng-title-block">
+            <div class="eng-drawing-no">DWG-WND-001</div>
+            <div class="eng-meta">ME 26 · Energy Systems · Berkeley</div>
+            <h1>PROJECT WINDFREY</h1>
+            <div class="eng-revision">
+                <span>SCALE: 1:20</span>
+                <span>REV: A</span>
+                <span>AUTHOR: Z. Vaux</span>
+            </div>
+        </header>
+
+        <div class="eng-layout">
+            <nav class="eng-toc" aria-label="Table of contents">
+                <h2>INDEX</h2>
+                <ol>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#blade">Blade Design</a></li>
+                    <li><a href="#tower">Tower Structure</a></li>
+                    <li><a href="#analysis">FEA Analysis</a></li>
+                    <li><a href="#fabrication">Fabrication</a></li>
+                    <li><a href="#results">Test Results</a></li>
+                </ol>
+                <a href="../presentations/e26.pdf" target="_blank" rel="noopener" class="eng-pdf-link">↓ Full Report (PDF)</a>
+            </nav>
+
+            <main class="eng-body">
+                <section id="overview" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§01</span>
+                        <h2>OVERVIEW</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Designed and fabricated a functional wind turbine prototype with optimized blade twist and a modular twisted-facet tower. The system was developed using CAD, finite element analysis, and 3D printing to validate power output and structural stiffness under lab conditions.</p>
+                        <div class="eng-tags">
+                            <span class="eng-tag">CAD</span>
+                            <span class="eng-tag">FEA</span>
+                            <span class="eng-tag">3D Printing</span>
+                            <span class="eng-tag">Energy</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="blade" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§02</span>
+                        <h2>BLADE DESIGN</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Three-blade rotor with aerodynamic profiles and optimized twist angle along the span to maximize lift-to-drag ratio at the target operating wind speed. Blade geometry was iterated in CAD before FEA validation.</p>
+                        <ul>
+                            <li>3-blade configuration for balanced torque and reduced vibration</li>
+                            <li>Twist optimization to maintain efficient angle of attack across blade length</li>
+                            <li>Nacelle housing for generator shaft and bearing assembly</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="tower" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§03</span>
+                        <h2>TOWER STRUCTURE</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Modular tower with a distinctive twisted-facet geometry — flat triangular panels create a spiraling structural form that tapers from base to nacelle. Mounted on a square steel base plate for stability during testing.</p>
+                        <figure class="eng-integrated-figure" style="max-width: 420px; margin: 20px auto;">
+                            <div class="eng-figure-media">
+                                <img src="../images/projects/wind-turbine-crop.png" alt="Wind turbine prototype with twisted tower and three blades">
+                            </div>
+                            <figcaption>FIG 1 — ASSEMBLED PROTOTYPE · LAB TEST BENCH</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="analysis" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§04</span>
+                        <h2>FEA ANALYSIS</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Finite element analysis performed on blade and tower components to verify structural stiffness and identify stress concentrations before fabrication. Analysis informed material thickness and facet angle decisions.</p>
+                        <table class="eng-spec-table">
+                            <thead>
+                                <tr><th>COMPONENT</th><th>ANALYSIS TYPE</th><th>CRITERION</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Blade</td><td>Static stress</td><td>Max deflection under rated load</td></tr>
+                                <tr><td>Tower</td><td>Buckling / stiffness</td><td>Factor of safety &gt; 2.0</td></tr>
+                                <tr><td>Base plate</td><td>Reaction forces</td><td>Overturning moment resistance</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="fabrication" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§05</span>
+                        <h2>FABRICATION</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Primary structural components 3D-printed for rapid iteration. Modular tower sections allow assembly/disassembly for transport and testing configuration changes.</p>
+                        <ul>
+                            <li>3D-printed blades, nacelle, and twisted tower facets</li>
+                            <li>Metal shaft through nacelle for rotor assembly</li>
+                            <li>Square base plate for bench mounting</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="results" class="eng-section">
+                    <div class="eng-section-header">
+                        <span class="eng-section-num">§06</span>
+                        <h2>TEST RESULTS</h2>
+                    </div>
+                    <div class="eng-section-body">
+                        <p>Prototype tested under controlled lab wind conditions. Achieved efficient electricity generation with validated power output and acceptable structural stiffness. Results confirmed the twisted-blade and modular tower design met project objectives.</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../engineering.js"></script>
+</body>
+</html>

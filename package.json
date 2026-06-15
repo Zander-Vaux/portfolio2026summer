@@ -1,0 +1,33 @@
+{
+  "name": "zander-vaux-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Zander Vaux - XR Developer and Product Manager",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx vercel dev",
+    "build": "echo 'Static site - no build step required'",
+    "start": "npx serve .",
+    "deploy": "npx vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "xr",
+    "ar",
+    "vr",
+    "developer",
+    "product-manager",
+    "immersive-tech"
+  ],
+  "author": "Zander Vaux",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+
+
+
+

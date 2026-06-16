@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '.blueprint-tile',
             '.blueprint-sheet-header',
             '.build-card-link',
-            '.journal-entry--modal'
+            '.journal-entry--modal',
+            '.photo-album-card'
         ].join(', ');
 
         modalContent.querySelectorAll(selectors).forEach(function (el, i) {
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         bindContactCopy();
+        bindPhotoAlbums();
         requestAnimationFrame(staggerModalContent);
         modalClose.focus();
     }
@@ -89,6 +91,49 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             footerNote.textContent = 'All items claimed. Safe travels, Zander.';
         }
+    }
+
+    function bindPhotoAlbums() {
+        const albumsView = modalContent.querySelector('.photo-albums-view');
+        if (!albumsView) return;
+
+        const albumCards = modalContent.querySelectorAll('.photo-album-card');
+        const albumPanels = modalContent.querySelectorAll('.photo-album-detail');
+
+        function showAlbumShelf() {
+            albumsView.hidden = false;
+            albumPanels.forEach(function (panel) {
+                panel.hidden = true;
+            });
+        }
+
+        function showAlbum(albumId) {
+            const panel = modalContent.querySelector('#photo-album-' + albumId);
+            if (!panel) return;
+
+            albumsView.hidden = true;
+            albumPanels.forEach(function (p) {
+                p.hidden = true;
+            });
+            panel.hidden = false;
+
+            panel.querySelectorAll('.photo-cell').forEach(function (cell, i) {
+                cell.classList.add('motion-reveal');
+                cell.style.setProperty('--motion-delay', (i * 0.08) + 's');
+            });
+        }
+
+        albumCards.forEach(function (card) {
+            card.addEventListener('click', function () {
+                showAlbum(card.dataset.photoAlbum);
+            });
+        });
+
+        modalContent.querySelectorAll('.photo-album-back').forEach(function (btn) {
+            btn.addEventListener('click', showAlbumShelf);
+        });
+
+        showAlbumShelf();
     }
 
     function bindContactCopy() {

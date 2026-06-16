@@ -5,7 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Zander Vaux | Portfolio</title>
  <meta name="description" content="Portfolio of Zander Vaux, Product Manager, entrepreneur, and creative technologist. Open the suitcase and explore.">
- <link rel="stylesheet" href="styles.css?v=14">
+ <link rel="stylesheet" href="styles.css?v=23">
  <link rel="stylesheet" href="engineering.css">
  <link rel="stylesheet" href="builds.css">
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Special+Elite&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
@@ -314,23 +314,217 @@
 
  <!-- Photography -->
  <div id="panel-photos" data-tag="010" data-title="Vintage Camera">
- <h2>Photography</h2>
- <p class="modal-found">Shot on the road · Film &amp; digital · Places I've been</p>
- <div class="photo-gallery">
+ <h2>Photo Albums</h2>
+ <p class="modal-found">Shot on the road · Film &amp; digital · Stamped by place</p>
+
+ <div class="photo-albums-view">
+ <div class="photo-album-grid">
+ <button type="button" class="photo-album-card" data-photo-album="madrid">
+ <div class="photo-album-cover">
+ <img src="images/photos/madrid/sol-metro.png" alt="">
+ <div class="photo-travel-stamp photo-travel-stamp--madrid" aria-hidden="true">
+ <span class="photo-stamp-ring"></span>
+ <span class="photo-stamp-line">MADRID</span>
+ <span class="photo-stamp-line photo-stamp-line--bold">SPAIN</span>
+ <span class="photo-stamp-date">SPRING '26</span>
+ </div>
+ </div>
+ <span class="photo-album-label">Madrid</span>
+ <span class="photo-album-count">6 photos</span>
+ </button>
+
+ <button type="button" class="photo-album-card" data-photo-album="biarritz">
+ <div class="photo-album-cover">
+ <img src="images/photos/biarritz/sunset-rocher.png" alt="">
+ <div class="photo-travel-stamp photo-travel-stamp--biarritz" aria-hidden="true">
+ <span class="photo-stamp-ring"></span>
+ <span class="photo-stamp-line">BIARRITZ</span>
+ <span class="photo-stamp-line photo-stamp-line--bold">FRANCE</span>
+ <span class="photo-stamp-date">ATLANTIC COAST</span>
+ </div>
+ </div>
+ <span class="photo-album-label">Biarritz</span>
+ <span class="photo-album-count">3 photos</span>
+ </button>
+
+ <button type="button" class="photo-album-card" data-photo-album="milan">
+ <div class="photo-album-cover">
+ <img src="images/photos/milan/race-course.png" alt="">
+ <div class="photo-travel-stamp photo-travel-stamp--milan" aria-hidden="true">
+ <span class="photo-stamp-ring"></span>
+ <span class="photo-stamp-line">MILAN</span>
+ <span class="photo-stamp-line photo-stamp-line--bold">ITALY</span>
+ <span class="photo-stamp-date">STRAMILANO</span>
+ </div>
+ </div>
+ <span class="photo-album-label">Milan</span>
+ <span class="photo-album-count">3 photos</span>
+ </button>
+
+ <button type="button" class="photo-album-card" data-photo-album="australia">
+ <div class="photo-album-cover">
+ <img src="images/photos/australia/keppel-sunset.png" alt="">
+ <div class="photo-travel-stamp photo-travel-stamp--australia" aria-hidden="true">
+ <span class="photo-stamp-ring"></span>
+ <span class="photo-stamp-line">AUSTRALIA</span>
+ <span class="photo-stamp-line photo-stamp-line--bold">SUMMER 2024</span>
+ <span class="photo-stamp-date">NSW · QLD</span>
+ </div>
+ </div>
+ <span class="photo-album-label">Australia</span>
+ <span class="photo-album-count">3 photos</span>
+ </button>
+ </div>
+ </div>
+
+ <div class="photo-album-detail" id="photo-album-biarritz" hidden>
+ <button type="button" class="photo-album-back" aria-label="Back to photo albums">← Albums</button>
+ <div class="photo-album-detail-header">
+ <div class="photo-travel-stamp photo-travel-stamp--biarritz photo-travel-stamp--detail" aria-hidden="true">
+ <span class="photo-stamp-ring"></span>
+ <span class="photo-stamp-line">BIARRITZ</span>
+ <span class="photo-stamp-line photo-stamp-line--bold">FRANCE</span>
+ <span class="photo-stamp-date">ATLANTIC COAST</span>
+ </div>
+ <h3 class="photo-album-detail-title">Biarritz, France</h3>
+ </div>
+ <div class="photo-gallery photo-gallery--biarritz">
  <figure class="photo-cell photo-cell--wide">
- <img src="images/about.jpg" alt="Sydney harbour at golden hour">
- <figcaption>Sydney · Summer 2024</figcaption>
+ <img src="images/photos/biarritz/sunset-rocher.png" alt="Sunset at Rocher de la Vierge, Biarritz">
+ <figcaption>Rocher de la Vierge · Sunset over the Atlantic</figcaption>
  </figure>
  <figure class="photo-cell">
- <img src="images/hobbies.jpg" alt="Travel and adventure">
- <figcaption>On the road</figcaption>
+ <img src="images/photos/biarritz/grande-plage.png" alt="Grande Plage beach cove, Biarritz">
+ <figcaption>Grande Plage · Villa Belza on the cliff</figcaption>
  </figure>
- <figure class="photo-cell">
- <img src="images/profile.jpg" alt="Portrait">
- <figcaption>Berkeley</figcaption>
+ <figure class="photo-cell photo-cell--surfing">
+ <img src="images/photos/biarritz/surfing.png" alt="Surfer walking into the waves at Biarritz">
+ <figcaption class="photo-journal-caption">surfing in biarritz</figcaption>
  </figure>
  </div>
- <p class="photo-gallery-note">Add more shots to <code>images/photos/</code> to grow this roll.</p>
+ </div>
+
+ <div class="photo-album-detail" id="photo-album-milan" hidden>
+ <button type="button" class="photo-album-back" aria-label="Back to photo albums">← Albums</button>
+ <div class="photo-album-detail-header">
+ <div class="photo-travel-stamp photo-travel-stamp--milan photo-travel-stamp--detail" aria-hidden="true">
+ <span class="photo-stamp-ring"></span>
+ <span class="photo-stamp-line">MILAN</span>
+ <span class="photo-stamp-line photo-stamp-line--bold">ITALY</span>
+ <span class="photo-stamp-date">STRAMILANO</span>
+ </div>
+ <h3 class="photo-album-detail-title">Milan, Italy</h3>
+ </div>
+ <div class="photo-gallery photo-gallery--milan">
+ <figure class="photo-cell photo-cell--wide">
+ <img src="images/photos/milan/race-course.png" alt="Runners on the Stramilano course through Milan">
+ <figcaption class="photo-journal-caption">half marathon in milan</figcaption>
+ </figure>
+ <figure class="photo-cell">
+ <img src="images/photos/milan/finish-medals.png" alt="Finisher medals at Stramilano half marathon, Milan">
+ <figcaption>Stramilano · Finisher medals</figcaption>
+ </figure>
+ <figure class="photo-cell">
+ <img src="images/photos/milan/route-map.png" alt="Half marathon route map through Milan">
+ <figcaption>PR · Fastest half marathon</figcaption>
+ </figure>
+ </div>
+ </div>
+
+ <div class="photo-album-detail" id="photo-album-australia" hidden>
+ <button type="button" class="photo-album-back" aria-label="Back to photo albums">← Albums</button>
+ <div class="photo-album-detail-header">
+ <div class="photo-travel-stamp photo-travel-stamp--australia photo-travel-stamp--detail" aria-hidden="true">
+ <span class="photo-stamp-ring"></span>
+ <span class="photo-stamp-line">AUSTRALIA</span>
+ <span class="photo-stamp-line photo-stamp-line--bold">SUMMER 2024</span>
+ <span class="photo-stamp-date">NSW · QLD</span>
+ </div>
+ <h3 class="photo-album-detail-title">Australia</h3>
+ </div>
+ <p class="photo-album-journal-note">outdoor education in the blue mountains — then north to construction on a remote island in queensland</p>
+ <div class="photo-gallery photo-gallery--australia">
+ <figure class="photo-cell photo-cell--portrait">
+ <div class="photo-frame">
+ <span class="photo-location-tag">Blue Mountains, NSW</span>
+ <img src="images/photos/australia/blue-mountains.png" alt="On the cliff at Lincoln's Rock, Blue Mountains">
+ </div>
+ <figcaption>Outdoor education · Bushland heights</figcaption>
+ </figure>
+ <figure class="photo-cell">
+ <div class="photo-frame">
+ <span class="photo-location-tag">Great Keppel Island, QLD</span>
+ <img src="images/photos/australia/spirit-of-keppel.png" alt="Spirit of Keppel ferry, Queensland">
+ </div>
+ <figcaption>Construction crew · Spirit of Keppel</figcaption>
+ </figure>
+ <figure class="photo-cell">
+ <div class="photo-frame">
+ <span class="photo-location-tag">Keppel Bay, QLD</span>
+ <img src="images/photos/australia/keppel-sunset.png" alt="Sunset over Keppel Bay, Queensland">
+ </div>
+ <figcaption>Remote island · End of shift</figcaption>
+ </figure>
+ </div>
+ </div>
+
+ <div class="photo-album-detail" id="photo-album-madrid" hidden>
+ <button type="button" class="photo-album-back" aria-label="Back to photo albums">← Albums</button>
+ <div class="photo-album-detail-header">
+ <div class="photo-travel-stamp photo-travel-stamp--madrid photo-travel-stamp--detail" aria-hidden="true">
+ <span class="photo-stamp-ring"></span>
+ <span class="photo-stamp-line">MADRID</span>
+ <span class="photo-stamp-line photo-stamp-line--bold">SPAIN</span>
+ <span class="photo-stamp-date">SPRING '26</span>
+ </div>
+ <h3 class="photo-album-detail-title">Madrid &amp; Spain</h3>
+ </div>
+ <p class="photo-album-journal-note">studied abroad spring '26 at universidad carlos iii — engineering courses &amp; an art history class, weekends traveling around spain</p>
+ <div class="photo-gallery photo-gallery--madrid">
+ <figure class="photo-cell photo-cell--wide">
+ <div class="photo-frame">
+ <span class="photo-location-tag">Puerta del Sol · Madrid</span>
+ <img src="images/photos/madrid/sol-metro.png" alt="Sol metro station entrance at twilight, Madrid">
+ </div>
+ <figcaption class="photo-journal-caption">study abroad in madrid</figcaption>
+ </figure>
+ <figure class="photo-cell">
+ <div class="photo-frame">
+ <span class="photo-location-tag">UC3M · Madrid</span>
+ <img src="images/photos/madrid/uc3m.png" alt="Carlos III International School cultural performance">
+ </div>
+ <figcaption>Universidad Carlos III · Campus welcome</figcaption>
+ </figure>
+ <figure class="photo-cell">
+ <div class="photo-frame">
+ <span class="photo-location-tag">UC3M · Madrid</span>
+ <img src="images/photos/madrid/engineering-lab.png" alt="Engineering workshop at Universidad Carlos III">
+ </div>
+ <figcaption>Engineering courses · Manufacturing lab</figcaption>
+ </figure>
+ <figure class="photo-cell">
+ <div class="photo-frame">
+ <span class="photo-location-tag">Madrid</span>
+ <img src="images/photos/madrid/royal-palace.png" alt="Royal Palace of Madrid dome at golden hour">
+ </div>
+ <figcaption>Art history class · Palacio Real</figcaption>
+ </figure>
+ <figure class="photo-cell photo-cell--wide">
+ <div class="photo-frame">
+ <span class="photo-location-tag">Seville</span>
+ <img src="images/photos/madrid/seville.png" alt="Plaza de España fountain with a rainbow, Seville">
+ </div>
+ <figcaption>Weekend trip · Plaza de España</figcaption>
+ </figure>
+ <figure class="photo-cell">
+ <div class="photo-frame">
+ <span class="photo-location-tag">Cádiz</span>
+ <img src="images/photos/madrid/cadiz.png" alt="Pergola walkway overlooking the sea in Cádiz">
+ </div>
+ <figcaption>Coastal walk · Alameda Apodaca</figcaption>
+ </figure>
+ </div>
+ </div>
  </div>
 
  <!-- Personal / Travel -->

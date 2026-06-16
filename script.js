@@ -5,14 +5,39 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalTagId = document.getElementById('modal-tag-id');
     const footerNote = document.querySelector('.footer-note');
     const lostItems = document.querySelectorAll('.lost-item');
-    const panels = document.querySelectorAll('#modal-panels > div');
+    const deskSurface = document.querySelector('.desk-surface');
 
     const claimed = new Set();
     let lastFocused = null;
+    let isModalOpen = false;
+
+    function staggerModalContent() {
+        const selectors = [
+            'h2',
+            '.modal-found',
+            '.exp-section-title',
+            '.timeline-item',
+            '.modal-text p',
+            '.modal-text ul',
+            '.modal-grid > *',
+            '.contact-item',
+            '.contact-cta',
+            '.project-card',
+            '.blueprint-tile',
+            '.blueprint-sheet-header',
+            '.build-card-link',
+            '.journal-entry--modal'
+        ].join(', ');
+
+        modalContent.querySelectorAll(selectors).forEach(function (el, i) {
+            el.classList.add('motion-reveal');
+            el.style.setProperty('--motion-delay', (i * 0.07) + 's');
+        });
+    }
 
     function openModal(panelId, triggerEl) {
         const panel = document.getElementById('panel-' + panelId);
-        if (!panel) return;
+        if (!panel || isModalOpen) return;
 
         lastFocused = triggerEl || document.activeElement;
 
@@ -25,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             modalContent.classList.remove('blueprint-modal');
         }
 
+        isModalOpen = true;
         overlay.classList.add('active');
         overlay.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -36,10 +62,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         bindContactCopy();
+        requestAnimationFrame(staggerModalContent);
         modalClose.focus();
     }
 
     function closeModal() {
+        if (!isModalOpen) return;
+
+        isModalOpen = false;
         overlay.classList.remove('active');
         overlay.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
@@ -80,9 +110,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function handleItemActivate(item) {
+        if (!item.classList.contains('visible')) return;
+        openModal(item.dataset.modal, item);
+    }
+
+    if (deskSurface) {
+        deskSurface.addEventListener('click', function (e) {
+            if (e.target.closest('[data-journal-link]')) {
+                return;
+            }
+            const item = e.target.closest('.lost-item');
+            if (!item || !deskSurface.contains(item)) return;
+            handleItemActivate(item);
+        });
+    }
+
     lostItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-            openModal(item.dataset.modal, item);
+        item.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleItemActivate(item);
+            }
         });
     });
 
@@ -93,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+        if (e.key === 'Escape' && isModalOpen) {
             closeModal();
         }
     });

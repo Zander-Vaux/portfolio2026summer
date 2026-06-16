@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>TED Streaks | Product Build | Zander Vaux</title>
+ <meta name="description" content="Product management case study: designing a streak system for TED to drive daily learning habits.">
+ <link rel="stylesheet" href="../builds.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="build-doc">
+ <a href="../index.html?modal=builds" class="build-back">← Builds</a>
+
+ <header class="build-hero-full">
+ <div class="build-hero-bg" aria-hidden="true"></div>
+ <div class="build-hero-glow" aria-hidden="true"></div>
+ <div class="build-hero-inner">
+ <span class="build-hero-tag">Build 01 · The Berkeley Group</span>
+ <h1>Turn inspiration into a <em>daily habit</em></h1>
+ <p class="build-hero-sub">A product recommendation for TED, helping curious learners come back every day, not just after a great talk.</p>
+ <div class="build-hero-facts">
+ <div class="build-hero-fact">
+ <span class="build-hero-fact-label">Role</span>
+ <span class="build-hero-fact-value">Product Consultant</span>
+ </div>
+ <div class="build-hero-fact">
+ <span class="build-hero-fact-label">Focus</span>
+ <span class="build-hero-fact-value">Retention &amp; Habit Design</span>
+ </div>
+ </div>
+ <div class="build-hero-cta">
+ <a href="#walkthrough" class="build-hero-btn" id="hero-play-btn">▶ Watch prototype walkthrough</a>
+ </div>
+ </div>
+ </header>
+
+ <nav class="build-journey-nav" aria-label="Case study journey">
+ <div class="build-journey-nav-inner">
+ <a href="#users">The User</a>
+ <a href="#problem">The Gap</a>
+ <a href="#solution">The Build</a>
+ <a href="#research">The Proof</a>
+ <a href="#impact">The Impact</a>
+ <a href="#ship">Ship It</a>
+ <a href="#walkthrough">Walkthrough</a>
+ </div>
+ </nav>
+
+ <section id="users" class="build-chapter build-chapter--alt">
+ <div class="build-chapter-inner">
+ <div class="build-chapter-label">
+ <span class="build-chapter-num">01</span>
+ <span class="build-chapter-line"></span>
+ </div>
+ <h2>Start with who you're building for</h2>
+ <p class="build-chapter-lead">TED's audience isn't one person. We mapped <strong>three distinct user mindsets</strong>, each with a different reason to return, and a different reason they'd churn without the right nudge.</p>
+ <div class="build-user-grid">
+ <article class="build-user-card">
+ <p class="build-user-quote">I want to learn every day, but I never stick with it.</p>
+ <p class="build-user-type">Habit-forming learner</p>
+ <p class="build-user-need">Needs visible progress and a reason to open the app tomorrow. Streaks turn intention into a daily ritual they don't want to break.</p>
+ </article>
+ <article class="build-user-card">
+ <p class="build-user-quote">I only have five minutes. Make it count.</p>
+ <p class="build-user-type">Growth-oriented professional</p>
+ <p class="build-user-need">Needs bite-sized engagement that fits a commute or coffee break. Daily nudges with curated content reduce decision fatigue.</p>
+ </article>
+ <article class="build-user-card">
+ <p class="build-user-quote">If it's not fun, I'm not doing it.</p>
+ <p class="build-user-type">Gen Z &amp; Alpha</p>
+ <p class="build-user-need">Grew up on gamified apps. Badges, milestones, and streak counters make learning feel native to how they already use their phone.</p>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <section id="problem" class="build-chapter">
+ <div class="build-chapter-inner">
+ <div class="build-chapter-label">
+ <span class="build-chapter-num">02</span>
+ <span class="build-chapter-line"></span>
+ </div>
+ <h2>The gap between inspiration and habit</h2>
+ <div class="build-problem-block">
+ <div>
+ <div class="build-problem-stat">1 visit<span>then silence until the next viral talk</span></div>
+ </div>
+ <div class="build-problem-text">
+ <p>TED's mission is <strong>lifelong learning and continuous curiosity</strong>, but most users engage episodically. They watch a talk, feel inspired, and leave.</p>
+ <p>The problem isn't content. It's <strong>habit infrastructure</strong>: no repeatable routine, no progress signal, no lightweight reason to return tomorrow.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <section id="solution" class="build-chapter build-chapter--alt">
+ <div class="build-chapter-inner">
+ <div class="build-chapter-label">
+ <span class="build-chapter-num">03</span>
+ <span class="build-chapter-line"></span>
+ </div>
+ <h2>The build: TED Streaks</h2>
+ <p class="build-chapter-lead">Introduce <strong>Streaks</strong>, a system that rewards consecutive days of engagement, turning TED from a destination into a daily ritual. Push notifications, email reminders, and progress bars make learning feel incremental without overwhelming users.</p>
+ <div class="build-feature-stack">
+ <div class="build-feature-card">
+ <span class="build-feature-icon">🔥</span>
+ <div>
+ <h3>Daily streak counter</h3>
+ <p>Visual tracker of consecutive engagement days, reinforced by notifications that celebrate momentum.</p>
+ </div>
+ </div>
+ <div class="build-feature-card">
+ <span class="build-feature-icon">🎯</span>
+ <div>
+ <h3>Personalized nudges</h3>
+ <p>Tailored daily recommendations that keep streaks alive and cut choice fatigue.</p>
+ </div>
+ </div>
+ <div class="build-feature-card">
+ <span class="build-feature-icon">🏅</span>
+ <div>
+ <h3>Reward milestones</h3>
+ <p>Badges and exclusive playlists unlocked at commitment thresholds.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <section id="research" class="build-chapter">
+ <div class="build-chapter-inner">
+ <div class="build-chapter-label">
+ <span class="build-chapter-num">04</span>
+ <span class="build-chapter-line"></span>
+ </div>
+ <h2>The proof: what Duolingo's data shows</h2>
+ <p class="build-chapter-lead">We benchmarked against the gold standard in habit design. Duolingo doesn't just count days, it taps into <strong>identity, loss aversion, and progress visibility</strong> to sustain long-term commitment.</p>
+ <div class="build-insight-row">
+ <div class="build-insight">
+ <div class="build-insight-num">30–40%</div>
+ <p>Higher persistence when long-streak users start seeing themselves as <strong>"streak keepers"</strong>, an identity loop, not just a counter.</p>
+ </div>
+ <div class="build-insight">
+ <div class="build-insight-num">15%</div>
+ <p>Reduction in next-day churn when a <strong>Streak Freeze</strong> cushions the moment a user would have lost their progress.</p>
+ </div>
+ <div class="build-insight">
+ <div class="build-insight-num">2×</div>
+ <p>More lessons per session for users with 50+ day streaks, they don't just return, they <strong>go deeper</strong>.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <section id="impact" class="build-chapter build-chapter--alt">
+ <div class="build-chapter-inner">
+ <div class="build-chapter-label">
+ <span class="build-chapter-num">05</span>
+ <span class="build-chapter-line"></span>
+ </div>
+ <h2>How we'd measure success</h2>
+ <p class="build-chapter-lead build-chapter-lead--tight">Every recommendation needs a scoreboard. These three metrics tell us whether streaks are creating <strong>real habits</strong>, not just vanity engagement.</p>
+ <div class="build-metrics-grid">
+ <article class="build-metric-card">
+ <span class="build-metric-abbr">DRR</span>
+ <h3>Daily return rate</h3>
+ <p>Percentage of users returning each day. The core signal that streak-driven routines are actually working.</p>
+ </article>
+ <article class="build-metric-card">
+ <span class="build-metric-abbr">SCR</span>
+ <h3>Streak completion rate</h3>
+ <p>How consistently users maintain multi-week streaks, revealing predictable learning habits over time.</p>
+ </article>
+ <article class="build-metric-card">
+ <span class="build-metric-abbr">SDL</span>
+ <h3>Session depth lift</h3>
+ <p>More talks watched, ideas saved, and snippets explored per session after streak prompts fire.</p>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <section id="ship" class="build-chapter">
+ <div class="build-chapter-inner">
+ <div class="build-chapter-label">
+ <span class="build-chapter-num">06</span>
+ <span class="build-chapter-line"></span>
+ </div>
+ <h2>Ship it</h2>
+ <p class="build-chapter-lead">From recommendation to experiment, a phased rollout that validates the habit loop before scaling.</p>
+ <div class="build-roadmap">
+ <div class="build-roadmap-item" data-step="Wk 1–2">
+ <p>Design a lightweight streak tracker that <strong>logs daily actions</strong> inside the TED app.</p>
+ </div>
+ <div class="build-roadmap-item" data-step="Wk 3–4">
+ <p>Launch <strong>customizable reminder cues</strong>, push and email nudges tied to user preferences.</p>
+ </div>
+ <div class="build-roadmap-item" data-step="Wk 5–6">
+ <p>Ship <strong>themed streak challenges</strong> with milestone badges and exclusive content unlocks.</p>
+ </div>
+ <div class="build-roadmap-item" data-step="Wk 7–8">
+ <p>Run an <strong>A/B test</strong>, streak-enabled experience vs. current app. Measure DRR and session depth.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <section id="walkthrough" class="build-chapter build-chapter--video">
+ <div class="build-chapter-inner">
+ <div class="build-chapter-label">
+ <span class="build-chapter-num">07</span>
+ <span class="build-chapter-line"></span>
+ </div>
+ <h2>See it in action</h2>
+ <p class="build-chapter-lead">End-to-end prototype walkthrough, from first-day commitment to milestone rewards.</p>
+ <div class="build-video-stage">
+ <div class="build-video-player" id="video-player">
+ <video
+ id="walkthrough-video"
+ playsinline
+ preload="metadata"
+ controls>
+ <source src="../videos/streaks-walkthrough.mov" type="video/quicktime">
+ <source src="../videos/streaks-walkthrough.mov" type="video/mp4">
+ </video>
+ <div class="build-video-overlay" id="video-overlay">
+ <button type="button" class="build-video-play-btn" id="video-play-btn" aria-label="Play streaks walkthrough">▶</button>
+ <span>Streaks prototype walkthrough</span>
+ </div>
+ </div>
+ <p class="build-video-caption">Click to play · Full prototype flow from commitment to streak celebration</p>
+ </div>
+ </div>
+ </section>
+
+ <script src="../builds.js"></script>
+</body>
+</html>

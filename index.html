@@ -1,520 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zander Vaux — Portfolio</title>
-    <meta name="description" content="Portfolio of Zander Vaux — Product Manager, entrepreneur, and creative technologist. Open the suitcase and explore.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="engineering.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Special+Elite&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Zander Vaux | Portfolio</title>
+ <meta name="description" content="Portfolio of Zander Vaux, Product Manager, entrepreneur, and creative technologist. Open the suitcase and explore.">
+ <link rel="stylesheet" href="styles.css?v=14">
+ <link rel="stylesheet" href="engineering.css">
+ <link rel="stylesheet" href="builds.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Special+Elite&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="ambient-glow" aria-hidden="true"></div>
-    <div class="scene">
-        <header class="desk-header">
-            <div class="suitcase-handle" aria-hidden="true">
-                <span class="handle-mount handle-mount--left"></span>
-                <span class="handle-arc"></span>
-                <span class="handle-mount handle-mount--right"></span>
-            </div>
-            <p class="desk-subtitle">Packed for <strong>Zander Vaux</strong></p>
-            <p class="desk-hint"><i class="fas fa-hand-pointer"></i> Click an item to inspect</p>
-        </header>
+ <div class="ambient-glow" aria-hidden="true">
+ <span class="ambient-orb ambient-orb--1"></span>
+ <span class="ambient-orb ambient-orb--2"></span>
+ <span class="ambient-orb ambient-orb--3"></span>
+ </div>
+ <div class="scene">
+ <header class="desk-header">
+ <p class="desk-subtitle">Packed for <strong>Zander Vaux</strong></p>
+ <p class="desk-hint"><i class="fas fa-hand-pointer"></i> Hover the journal to browse · Click items to explore</p>
+ </header>
 
-        <div class="desk">
-            <div class="suitcase-rim" aria-hidden="true">
-                <span class="suitcase-zipper"></span>
-            </div>
-            <div class="desk-surface">
-                <div class="suitcase-stamp" aria-hidden="true">
-                    <span class="stamp-ring"></span>
-                    <span class="stamp-title">ZANDER'S</span>
-                    <span class="stamp-sub">SUITCASE</span>
-                    <span class="stamp-date">JUN 2026</span>
-                </div>
-                <!-- Passport → About -->
-                <button class="lost-item item-passport" data-modal="passport" aria-label="Inspect passport — About Zander">
-                    <div class="passport-cover">
-                        <span class="passport-emblem">🌐</span>
-                        <span class="passport-title">PASSPORT</span>
-                        <span class="passport-name">Z. Vaux</span>
-                    </div>
-                    <span class="item-label">About</span>
-                </button>
+ <div class="desk">
+ <div class="suitcase-shell">
+ <div class="suitcase-handle" aria-hidden="true">
+ <span class="handle-mount handle-mount--left"></span>
+ <span class="handle-arc"></span>
+ <span class="handle-mount handle-mount--right"></span>
+ </div>
+ <div class="suitcase-rim" aria-hidden="true">
+ <span class="suitcase-zipper"></span>
+ </div>
+ <div class="desk-surface flatlay">
+ <div class="suitcase-stamp" aria-hidden="true">
+ <span class="stamp-ring"></span>
+ <span class="stamp-title">ZANDER'S</span>
+ <span class="stamp-sub">SUITCASE</span>
+ <span class="stamp-date">JUN 2026</span>
+ </div>
 
-                <!-- Boarding passes → Experience -->
-                <button class="lost-item item-boarding" data-modal="experience" aria-label="Inspect boarding passes — Work experience">
-                    <div class="boarding-pass">
-                        <div class="bp-header">BOARDING PASS</div>
-                        <div class="bp-route">SFO <i class="fas fa-plane"></i> BER</div>
-                        <div class="bp-detail">COMPANIES &middot; NONPROFITS</div>
-                        <div class="bp-barcode" aria-hidden="true"></div>
-                    </div>
-                    <span class="item-label">Experience</span>
-                </button>
+ <div class="flatlay-decor flatlay-plaid" aria-hidden="true"></div>
 
-                <!-- Polaroid → Personal / Travel -->
-                <button class="lost-item item-polaroid" data-modal="personal" aria-label="Inspect polaroid — Travel and personal projects">
-                    <div class="polaroid-frame">
-                        <img src="images/about.jpg" alt="" class="polaroid-img">
-                        <span class="polaroid-caption">Sydney '24</span>
-                    </div>
-                    <span class="item-label">Travel</span>
-                </button>
+ <!-- Product Development → travel journal -->
+ <div class="lost-item item-projects" data-modal="builds" tabindex="0" role="button" aria-label="Product development journal — hover to open, click entries for projects">
+ <div class="travel-journal">
+ <div class="journal-cover-face">
+ <div class="journal-travel-stamp" aria-hidden="true">
+ <span class="journal-stamp-ring"></span>
+ <span class="journal-stamp-line">PRODUCT</span>
+ <span class="journal-stamp-line journal-stamp-line--bold">DEVELOPMENT</span>
+ <span class="journal-stamp-date">PM · 2026</span>
+ </div>
+ <span class="journal-elastic" aria-hidden="true"></span>
+ <span class="journal-cover-eyebrow">Field Notes</span>
+ <span class="journal-cover-title">Product Management</span>
+ </div>
+ <div class="journal-spread" aria-hidden="true">
+ <div class="journal-page journal-page--left">
+ <p class="journal-handwriting">ideas shipped<br>along the way</p>
+ <span class="journal-page-no">p. 12</span>
+ </div>
+ <div class="journal-page journal-page--right journal-page--stacked">
+ <a href="builds/ted-streaks.html" class="journal-entry journal-entry--row" data-journal-link>
+ <span class="journal-entry-stamp journal-entry-stamp--ted">TED</span>
+ <span class="journal-entry-body">
+ <span class="journal-entry-title">Streaks</span>
+ <span class="journal-entry-desc">Habit loops · retention</span>
+ </span>
+ <span class="journal-entry-cta">open →</span>
+ </a>
+ <a href="https://dj.tribexr.com/ddj-flx4" class="journal-entry journal-entry--row" data-journal-link target="_blank" rel="noopener">
+ <span class="journal-entry-stamp journal-entry-stamp--tribe">TRIBE</span>
+ <span class="journal-entry-body">
+ <span class="journal-entry-title">XR Copilot</span>
+ <span class="journal-entry-desc">AI DJ mentor · 3K+ MAU</span>
+ </span>
+ <span class="journal-entry-cta">live →</span>
+ </a>
+ </div>
+ </div>
+ </div>
+ <span class="item-label">Product</span>
+ </div>
 
-                <!-- Napkin sketch → Leadership -->
-                <button class="lost-item item-napkin" data-modal="leadership" aria-label="Inspect napkin sketch — Leadership">
-                    <div class="napkin">
-                        <div class="sketch-line"></div>
-                        <div class="sketch-line short"></div>
-                        <div class="sketch-box"></div>
-                        <span class="sketch-label">user flow?</span>
-                        <span class="sketch-label figma">figma</span>
-                    </div>
-                    <span class="item-label">Leadership</span>
-                </button>
+ <!-- Blueprint → Engineering -->
+ <button class="lost-item item-blueprint" data-modal="engineering" aria-label="Inspect blueprint, Engineering projects">
+ <div class="blueprint-desk">
+ <div class="blueprint-unrolled">
+ <img src="images/desk-blueprint-crop.png" alt="" class="blueprint-img">
+ </div>
+ <span class="blueprint-pencil" aria-hidden="true">
+ <span class="pencil-eraser"></span>
+ <span class="pencil-ferrule"></span>
+ <span class="pencil-band"></span>
+ <span class="pencil-shaft"></span>
+ <span class="pencil-wood"></span>
+ <span class="pencil-graphite"></span>
+ </span>
+ </div>
+ <span class="item-label">Engineering</span>
+ </button>
 
-                <!-- Headphones → Tribe XR / AI Copilot -->
-                <button class="lost-item item-headphones" data-modal="tribe" aria-label="Inspect headphones — Tribe XR and AI DJ Copilot">
-                    <div class="headphones-visual">
-                        <i class="fas fa-headphones"></i>
-                        <span class="hp-brand">TRIBE XR</span>
-                    </div>
-                    <span class="item-label">Tribe XR</span>
-                </button>
+ <!-- Experience → boarding pass stack (hero slot) -->
+ <button class="lost-item item-boarding" data-modal="experience" aria-label="Inspect boarding passes, Work experience">
+ <div class="boarding-pass-stack">
+ <div class="boarding-pass boarding-pass--back boarding-pass--back-3" aria-hidden="true"></div>
+ <div class="boarding-pass boarding-pass--back boarding-pass--back-2" aria-hidden="true"></div>
+ <div class="boarding-pass boarding-pass--back boarding-pass--back-1" aria-hidden="true"></div>
+ <div class="boarding-pass boarding-pass--hero boarding-pass--front">
+ <div class="bp-header">BOARDING PASSES</div>
+ <div class="bp-detail">✈️ EXPERIENCE</div>
+ <div class="bp-sub">Companies &amp; nonprofits · 2023–2025</div>
+ <div class="bp-barcode" aria-hidden="true"></div>
+ </div>
+ </div>
+ <span class="item-label">Experience</span>
+ </button>
 
-                <!-- Manila folder → Consulting projects -->
-                <button class="lost-item item-folder" data-modal="consulting" aria-label="Inspect folder — Consulting and PM projects">
-                    <div class="manila-folder">
-                        <div class="folder-tab">CONSULTING</div>
-                        <div class="folder-body">
-                            <span>4 case studies</span>
-                        </div>
-                    </div>
-                    <span class="item-label">Projects</span>
-                </button>
+ <!-- Vintage camera → Photography -->
+ <button class="lost-item item-camera" data-modal="photos" aria-label="Inspect vintage camera, Photography">
+ <div class="camera-stack">
+ <div class="vintage-camera vintage-camera--rangefinder" aria-hidden="true">
+ <div class="vc-top">
+ <span class="vc-hotshoe"></span>
+ <span class="vc-dial"></span>
+ </div>
+ <div class="vc-body">
+ <span class="vc-viewfinder"></span>
+ <span class="vc-lens"><span class="vc-lens-ring"></span></span>
+ <span class="vc-grip"></span>
+ </div>
+ </div>
+ <div class="vintage-camera vintage-camera--compact" aria-hidden="true">
+ <span class="vc-compact-lens"></span>
+ <span class="vc-compact-slot"></span>
+ </div>
+ </div>
+ <span class="item-label">Photos</span>
+ </button>
 
-                <!-- Blueprint sheet → Engineering -->
-                <button class="lost-item item-blueprint" data-modal="engineering" aria-label="Inspect blueprint — Engineering projects">
-                    <div class="blueprint-desk">
-                        <div class="blueprint-unrolled">
-                            <img src="images/desk-blueprint-crop.png" alt="" class="blueprint-img">
-                        </div>
-                        <span class="blueprint-pencil" aria-hidden="true">
-                            <span class="pencil-eraser"></span>
-                            <span class="pencil-ferrule"></span>
-                            <span class="pencil-band"></span>
-                            <span class="pencil-shaft"></span>
-                            <span class="pencil-wood"></span>
-                            <span class="pencil-graphite"></span>
-                        </span>
-                    </div>
-                    <span class="item-label">Engineering</span>
-                </button>
+ <!-- Polaroid → Travel -->
+ <button class="lost-item item-polaroid" data-modal="personal" aria-label="Inspect polaroid, Travel and personal projects">
+ <div class="polaroid-frame">
+ <img src="images/about.jpg" alt="" class="polaroid-img">
+ <span class="polaroid-caption">Sydney '24</span>
+ </div>
+ <span class="item-label">Travel</span>
+ </button>
 
-                <!-- Phone → Contact -->
-                <button class="lost-item item-phone" data-modal="contact" aria-label="Inspect phone — Contact information">
-                    <div class="phone-device">
-                        <div class="phone-screen">
-                            <div class="phone-notch" aria-hidden="true"></div>
-                            <div class="phone-lock">
-                                <span class="phone-time">9:41</span>
-                                <div class="phone-avatar">
-                                    <img src="images/profile.jpg" alt="">
-                                </div>
-                                <span class="phone-contact-name">Zander Vaux</span>
-                                <span class="phone-contact-hint">tap to connect</span>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="item-label">Contact</span>
-                </button>
+ <!-- Passport → About -->
+ <button class="lost-item item-passport" data-modal="passport" aria-label="Inspect passport, About Zander">
+ <div class="passport-cover">
+ <span class="passport-emblem" aria-hidden="true"></span>
+ <span class="passport-title">PASSPORT</span>
+ <span class="passport-name">Zander Vaux</span>
+ </div>
+ <span class="item-label">About</span>
+ </button>
 
-                <!-- ID badge always on desk -->
-                <div class="id-badge" aria-hidden="true">
-                    <img src="images/profile.jpg" alt="">
-                    <div class="badge-info">
-                        <strong>Zander Vaux</strong>
-                        <span>Product &middot; M.E.T. '26</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- Phone → Contact -->
+ <button class="lost-item item-phone" data-modal="contact" aria-label="Inspect phone, Contact information">
+ <div class="phone-device">
+ <div class="phone-screen">
+ <div class="phone-notch" aria-hidden="true"></div>
+ <div class="phone-lock">
+ <span class="phone-time">9:41</span>
+ <div class="phone-avatar">
+ <img src="images/profile.jpg" alt="">
+ </div>
+ <span class="phone-contact-name">Zander Vaux</span>
+ <span class="phone-contact-hint">tap to connect</span>
+ </div>
+ </div>
+ </div>
+ <span class="item-label">Contact</span>
+ </button>
+ </div>
+ </div>
+ </div>
 
-        <footer class="desk-footer">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/zandervaux/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto:zandervaux@berkeley.edu" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            <p class="footer-note">No items claimed yet today.</p>
-        </footer>
-    </div>
+ <footer class="desk-footer">
+ <div class="social-links">
+ <a href="https://www.linkedin.com/in/zandervaux/" target="_blank" rel="noopener" aria-label="LinkedIn">
+ <i class="fab fa-linkedin"></i>
+ </a>
+ <a href="mailto:zandervaux@berkeley.edu" aria-label="Email">
+ <i class="fas fa-envelope"></i>
+ </a>
+ </div>
+ <p class="footer-note">No items claimed yet today.</p>
+ </footer>
+ </div>
 
-    <!-- Modal -->
-    <div class="modal-overlay" id="modal-overlay" aria-hidden="true">
-        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-            <div class="modal-chrome">
-                <div class="modal-tag">
-                    <span class="modal-tag-label">ITEM #</span>
-                    <span class="modal-tag-id" id="modal-tag-id">001</span>
-                </div>
-                <button class="modal-close" id="modal-close" aria-label="Return to suitcase">
-                    <i class="fas fa-times"></i> Return to suitcase
-                </button>
-            </div>
-            <div class="modal-content" id="modal-content"></div>
-        </div>
-    </div>
+ <!-- Modal -->
+ <div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+ <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+ <div class="modal-chrome">
+ <div class="modal-tag">
+ <span class="modal-tag-label">ITEM #</span>
+ <span class="modal-tag-id" id="modal-tag-id">001</span>
+ </div>
+ <button class="modal-close" id="modal-close" aria-label="Return to suitcase">
+ <i class="fas fa-times"></i> Return to suitcase
+ </button>
+ </div>
+ <div class="modal-content" id="modal-content"></div>
+ </div>
+ </div>
 
-    <!-- Modal content panels (hidden) -->
-    <div id="modal-panels" hidden>
-        <!-- Passport / About -->
-        <div id="panel-passport" data-tag="001" data-title="Passport">
-            <h2 id="modal-title">Passport</h2>
-            <p class="modal-found">Found at Gate B12 &middot; Reported lost during semester abroad mindset</p>
-            <div class="modal-grid">
-                <div class="modal-text">
-                    <p>I'm a UC Berkeley student in the M.E.T. Program, studying Mechanical Engineering and Business. I'm passionate about product management and entrepreneurship, and I bring the same curiosity and adventurous spirit I have for exploring the world into the way I build products.</p>
-                    <p><strong>Interests:</strong></p>
-                    <ul>
-                        <li>Product management and user-centered design</li>
-                        <li>Entrepreneurship and building scalable ideas</li>
-                        <li>Travel, adventure, and cross-cultural experiences</li>
-                        <li>Creative storytelling through film, design, and music</li>
-                    </ul>
-                    <div class="role-tags">
-                        <span class="tag">Product Manager</span>
-                        <span class="tag">Entrepreneur</span>
-                        <span class="tag">Creative Tech</span>
-                    </div>
-                </div>
-                <div class="modal-image">
-                    <img src="images/about.jpg" alt="Zander Vaux" class="section-image">
-                </div>
-            </div>
-        </div>
+ <!-- Modal content panels (hidden) -->
+ <div id="modal-panels" hidden>
+ <!-- Passport / About -->
+ <div id="panel-passport" data-tag="001" data-title="Passport">
+ <h2 id="modal-title">Passport</h2>
+ <p class="modal-found">Found at Gate B12 &middot; Reported lost during semester abroad mindset</p>
+ <div class="modal-grid">
+ <div class="modal-text">
+ <p>I'm a UC Berkeley student in the M.E.T. Program, studying Mechanical Engineering and Business. I'm passionate about product management and entrepreneurship, and I bring the same curiosity and adventurous spirit I have for exploring the world into the way I build products.</p>
+ <p><strong>Interests:</strong></p>
+ <ul>
+ <li>Product management and user-centered design</li>
+ <li>Entrepreneurship and building scalable ideas</li>
+ <li>Travel, adventure, and cross-cultural experiences</li>
+ <li>Creative storytelling through film, design, and music</li>
+ </ul>
+ <div class="role-tags">
+ <span class="tag">Product Manager</span>
+ <span class="tag">Entrepreneur</span>
+ <span class="tag">Creative Tech</span>
+ </div>
+ </div>
+ <div class="modal-image">
+ <img src="images/about.jpg" alt="Zander Vaux" class="section-image">
+ </div>
+ </div>
+ </div>
 
-        <!-- Experience -->
-        <div id="panel-experience" data-tag="002" data-title="Boarding Passes">
-            <h2>Boarding Passes</h2>
-            <p class="modal-found">Companies &amp; nonprofits &middot; 2023–2025</p>
+ <!-- Experience -->
+ <div id="panel-experience" data-tag="002" data-title="Boarding Passes">
+ <h2>Boarding Passes</h2>
+ <p class="modal-found">Companies &amp; nonprofits &middot; 2023–2025</p>
 
-            <h3 class="exp-section-title"><i class="fas fa-building"></i> Companies</h3>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Tribe XR (Virtual DJ Platform)</h3>
-                        <p class="role">Product Manager Intern</p>
-                        <p class="period">Jun 2024 - May 2025</p>
-                        <ul>
-                            <li>Launched an AI DJ copilot on the web deck, scaled it to 3,000+ monthly users, and secured adoption by AlphaTheta, a global DJ leader</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Meta</h3>
-                        <p class="role">Product Associate (Contract)</p>
-                        <p class="period">Feb 2024 - May 2024</p>
-                        <ul>
-                            <li>Built a reliability onboarding module and an internal dashboard tracking key reliability metrics; aligned 15+ stakeholders on 10 guidelines projected to cut downtime ~10%</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>MongoDB</h3>
-                        <p class="role">Strategy Analyst (Contract)</p>
-                        <p class="period">Aug 2023 - Dec 2023</p>
-                        <ul>
-                            <li>Analyzed 100+ student surveys and 5 faculty interviews to pinpoint drop-offs in the student Python learning path, benchmarked against Khan Academy and Edpuzzle, and recommended a 12-week mentor track plus 6 data-viz modules projected to raise completion by 25%</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Blackstone</h3>
-                        <p class="role">Associate Consultant (Contract)</p>
-                        <p class="period">Jan 2025 - May 2025</p>
-                        <ul>
-                            <li>Delivered strategic recommendations on fractionalized real estate and quantum computing to 7+ senior executives, including a risk mitigation framework</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+ <h3 class="exp-section-title"><i class="fas fa-building"></i> Companies</h3>
+ <div class="experience-timeline">
+ <div class="timeline-item">
+ <div class="timeline-content">
+ <h3>Tribe XR (Virtual DJ Platform)</h3>
+ <p class="role">Product Manager Intern</p>
+ <p class="period">Jun 2024 - May 2025</p>
+ <ul>
+ <li>Launched an AI DJ copilot on the web deck, scaled it to 3,000+ monthly users, and secured adoption by AlphaTheta, a global DJ leader</li>
+ </ul>
+ </div>
+ </div>
+ <div class="timeline-item">
+ <div class="timeline-content">
+ <h3>Meta</h3>
+ <p class="role">Product Associate (Contract)</p>
+ <p class="period">Feb 2024 - May 2024</p>
+ <ul>
+ <li>Built a reliability onboarding module and an internal dashboard tracking key reliability metrics; aligned 15+ stakeholders on 10 guidelines projected to cut downtime ~10%</li>
+ </ul>
+ </div>
+ </div>
+ <div class="timeline-item">
+ <div class="timeline-content">
+ <h3>MongoDB</h3>
+ <p class="role">Strategy Analyst (Contract)</p>
+ <p class="period">Aug 2023 - Dec 2023</p>
+ <ul>
+ <li>Analyzed 100+ student surveys and 5 faculty interviews to pinpoint drop-offs in the student Python learning path, benchmarked against Khan Academy and Edpuzzle, and recommended a 12-week mentor track plus 6 data-viz modules projected to raise completion by 25%</li>
+ </ul>
+ </div>
+ </div>
+ <div class="timeline-item">
+ <div class="timeline-content">
+ <h3>Blackstone</h3>
+ <p class="role">Associate Consultant (Contract)</p>
+ <p class="period">Jan 2025 - May 2025</p>
+ <ul>
+ <li>Delivered strategic recommendations on fractionalized real estate and quantum computing to 7+ senior executives, including a risk mitigation framework</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-            <h3 class="exp-section-title exp-section-title--nonprofit"><i class="fas fa-hands-helping"></i> Nonprofits</h3>
-            <div class="experience-timeline">
-                <div class="timeline-item timeline-item--nonprofit">
-                    <div class="timeline-content">
-                        <h3>Organization Name</h3>
-                        <p class="role">Volunteer / Board Member</p>
-                        <p class="period">2023 - Present</p>
-                        <ul>
-                            <li>Describe your role and the mission of the organization</li>
-                            <li>Highlight a program you supported or helped launch</li>
-                            <li>Share measurable impact (people served, funds raised, etc.)</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-item--nonprofit">
-                    <div class="timeline-content">
-                        <h3>Organization Name</h3>
-                        <p class="role">Volunteer</p>
-                        <p class="period">2022 - 2024</p>
-                        <ul>
-                            <li>Describe your contribution and why the cause matters to you</li>
-                            <li>Add skills you brought (product, operations, fundraising, etc.)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <h3 class="exp-section-title exp-section-title--nonprofit"><i class="fas fa-hands-helping"></i> Nonprofits</h3>
+ <div class="experience-timeline">
+ <div class="timeline-item timeline-item--nonprofit">
+ <div class="timeline-content">
+ <h3>Boston Symphony Orchestra</h3>
+ <p class="role">Strategy Consultant · The Berkeley Group</p>
+ <p class="period">Aug 2025 - Dec 2025</p>
+ <ul>
+ <li>Delivered strategic recommendations on inclusive cultural programming expansion through competitive benchmarking and external stakeholder interviews, presented to BSO leadership</li>
+ </ul>
+ </div>
+ </div>
+ <div class="timeline-item timeline-item--nonprofit">
+ <div class="timeline-content">
+ <h3>TED</h3>
+ <p class="role">Product Consultant · The Berkeley Group</p>
+ <p class="period">Aug 2025 - Dec 2025</p>
+ <ul>
+ <li>Consulted for TED, the world's largest education nonprofit, to improve learner engagement operations; diagnosed episodic drop-off bottlenecks, benchmarked habit infrastructure against Duolingo, and delivered a streak system projected to lift daily return rate, cut next-day churn by 15%, and double session depth for committed learners</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- Leadership -->
-        <div id="panel-leadership" data-tag="003" data-title="Napkin Sketch">
-            <h2>Napkin Sketch</h2>
-            <p class="modal-found">Coffee-stained &middot; Berkeley campus &middot; Product Space fellowship notes</p>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>The Berkeley Group</h3>
-                        <p class="role">Consultant</p>
-                        <ul>
-                            <li>Delivered recommendations on inclusive programming for the Boston Symphony Orchestra through benchmarking and external interviews, and advised TED on AI use case implementation</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Product Space @ Berkeley</h3>
-                        <p class="role">Product Management Fellow</p>
-                        <ul>
-                            <li>Developed product roadmaps by translating user interviews into Figma flows in a semester-long, hands-on PM fellowship</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- Photography -->
+ <div id="panel-photos" data-tag="010" data-title="Vintage Camera">
+ <h2>Photography</h2>
+ <p class="modal-found">Shot on the road · Film &amp; digital · Places I've been</p>
+ <div class="photo-gallery">
+ <figure class="photo-cell photo-cell--wide">
+ <img src="images/about.jpg" alt="Sydney harbour at golden hour">
+ <figcaption>Sydney · Summer 2024</figcaption>
+ </figure>
+ <figure class="photo-cell">
+ <img src="images/hobbies.jpg" alt="Travel and adventure">
+ <figcaption>On the road</figcaption>
+ </figure>
+ <figure class="photo-cell">
+ <img src="images/profile.jpg" alt="Portrait">
+ <figcaption>Berkeley</figcaption>
+ </figure>
+ </div>
+ <p class="photo-gallery-note">Add more shots to <code>images/photos/</code> to grow this roll.</p>
+ </div>
 
-        <!-- Tribe XR spotlight -->
-        <div id="panel-tribe" data-tag="004" data-title="DJ Headphones">
-            <h2>DJ Headphones</h2>
-            <p class="modal-found">Left at the club &middot; Tribe XR &middot; San Francisco</p>
-            <div class="spotlight-card">
-                <div class="spotlight-header">
-                    <h3>AI DJ Copilot</h3>
-                    <a href="https://dj.tribexr.com/ddj-flx4" target="_blank" rel="noopener" class="external-link" aria-label="View AI DJ Copilot live">
-                        <i class="fas fa-external-link-alt"></i> Live product
-                    </a>
-                </div>
-                <p class="project-category">Figma / Next.js / OpenAI API</p>
-                <p class="project-description">AI-powered DJ mentor with personalized lessons and real-time feedback. Launched on the Tribe XR web deck and scaled to 3,000+ monthly users — later adopted by AlphaTheta, a global DJ hardware leader.</p>
-                <div class="project-tags">
-                    <span class="project-tag">AI</span>
-                    <span class="project-tag">UI/UX</span>
-                    <span class="project-tag">Music</span>
-                    <span class="project-tag">3K+ MAU</span>
-                    <span class="project-tag">Tribe XR</span>
-                </div>
-            </div>
-            <div class="timeline-item" style="margin-top: 24px;">
-                <div class="timeline-content">
-                    <h3>Tribe XR — Product Manager Intern</h3>
-                    <p class="period">Jun 2024 - May 2025</p>
-                    <ul>
-                        <li>Owned the AI copilot from concept to launch on the web deck</li>
-                        <li>Drove user research with DJs to shape lesson flows and real-time feedback loops</li>
-                        <li>Partnered with AlphaTheta for enterprise adoption of the copilot feature</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+ <!-- Personal / Travel -->
+ <div id="panel-personal" data-tag="005" data-title="Polaroid">
+ <h2>Polaroid</h2>
+ <p class="modal-found">Sydney, Australia &middot; Summer 2024 &middot; Shot on the road</p>
+ <div class="projects-grid">
+ <div class="project-card">
+ <div class="project-header">
+ <h3>Australia Travel Vlogs</h3>
+ <a href="https://www.youtube.com/watch?v=ARRNF4i9ce0" target="_blank" rel="noopener" class="external-link" aria-label="View YouTube Channel">
+ <i class="fas fa-external-link-alt"></i>
+ </a>
+ </div>
+ <p class="project-category">Solo Travel / Video Editing</p>
+ <p class="project-description">I started a YouTube channel while traveling across Australia, filming and editing cinematic vlogs that capture my adventures along the way.</p>
+ <div class="project-tags">
+ <span class="project-tag">DaVinci</span>
+ <span class="project-tag">Color Grading</span>
+ <span class="project-tag">Cinematography</span>
+ </div>
+ </div>
+ <div class="project-card">
+ <div class="project-header">
+ <h3>Behind the Coasterz</h3>
+ <a href="https://behindthecoasterz.com/" target="_blank" rel="noopener" class="external-link" aria-label="Visit Behind the Coasterz">
+ <i class="fas fa-external-link-alt"></i>
+ </a>
+ </div>
+ <p class="project-category">STEM / Engineering / Content / Community</p>
+ <p class="project-description">A STEM-focused blog exploring the engineering and science behind roller coasters worldwide, building a community for coaster enthusiasts and STEM learners.</p>
+ <div class="project-tags">
+ <span class="project-tag">STEM</span>
+ <span class="project-tag">Engineering</span>
+ <span class="project-tag">Content</span>
+ <span class="project-tag">Community</span>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- Personal / Travel -->
-        <div id="panel-personal" data-tag="005" data-title="Polaroid">
-            <h2>Polaroid</h2>
-            <p class="modal-found">Sydney, Australia &middot; Summer 2024 &middot; Shot on the road</p>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Australia Travel Vlogs</h3>
-                        <a href="https://www.youtube.com/watch?v=ARRNF4i9ce0" target="_blank" rel="noopener" class="external-link" aria-label="View YouTube Channel">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                    <p class="project-category">Solo Travel / Video Editing</p>
-                    <p class="project-description">I started a YouTube channel while traveling across Australia, filming and editing cinematic vlogs that capture my adventures along the way.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">DaVinci</span>
-                        <span class="project-tag">Color Grading</span>
-                        <span class="project-tag">Cinematography</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Behind the Coasterz</h3>
-                        <a href="https://behindthecoasterz.com/" target="_blank" rel="noopener" class="external-link" aria-label="Visit Behind the Coasterz">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                    <p class="project-category">STEM / Engineering / Content / Community</p>
-                    <p class="project-description">A STEM-focused blog exploring the engineering and science behind roller coasters worldwide, building a community for coaster enthusiasts and STEM learners.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">STEM</span>
-                        <span class="project-tag">Engineering</span>
-                        <span class="project-tag">Content</span>
-                        <span class="project-tag">Community</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- Engineering -->
+ <div id="panel-engineering" data-tag="007" data-title="Blueprint">
+ <h2>Blueprint Sheet</h2>
+ <p class="modal-found">Unrolled at the workbench &middot; Berkeley M.E.T. &middot; Select a drawing to open</p>
+ <div class="blueprint-sheet blueprint-sheet--index">
+ <div class="blueprint-sheet-header">
+ <div>
+ <h3>DEVICE BLUEPRINTS INDEX</h3>
+ <span class="blueprint-project-id">PROJECT: PORTFOLIO ENGINEERING</span>
+ </div>
+ <span>SCALE NTS · REV A · 06/15/26</span>
+ </div>
+ <div class="blueprint-grid blueprint-grid--drawings">
+ <a href="projects/lumen.html" class="blueprint-tile blueprint-tile--numbered" data-dwg="1">
+ <div class="blueprint-sketch blueprint-sketch--svg blueprint-sketch--isometric">
+ <img src="images/sketches/lumen-isometric.png" alt="">
+ </div>
+ <span class="blueprint-tile-name">PROJECT LUMEN</span>
+ <span class="blueprint-tile-code">DWG-LMN-001</span>
+ </a>
+ <a href="projects/windfrey.html" class="blueprint-tile blueprint-tile--numbered" data-dwg="2">
+ <div class="blueprint-sketch blueprint-sketch--svg blueprint-sketch--isometric">
+ <img src="images/sketches/wind-turbine-isometric.png" alt="">
+ </div>
+ <span class="blueprint-tile-name">WIND TURBINE</span>
+ <span class="blueprint-tile-code">DWG-WND-001</span>
+ </a>
+ <a href="projects/fridge-opener.html" class="blueprint-tile blueprint-tile--numbered" data-dwg="3">
+ <div class="blueprint-sketch blueprint-sketch--svg blueprint-sketch--isometric">
+ <img src="images/sketches/fridge-opener-isometric.png" alt="">
+ </div>
+ <span class="blueprint-tile-name">FRIDGE OPENER</span>
+ <span class="blueprint-tile-code">DWG-FRD-001</span>
+ </a>
+ </div>
+ </div>
+ </div>
 
-        <!-- Consulting projects -->
-        <div id="panel-consulting" data-tag="006" data-title="Manila Folder">
-            <h2>Manila Folder</h2>
-            <p class="modal-found">Stamped CONFIDENTIAL &middot; Strategy &amp; product case studies</p>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Blue Origin</h3>
-                        <a href="presentations/Blue Alchemist.pdf" target="_blank" rel="noopener" class="external-link" aria-label="View Blue Alchemist Presentation">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                    <p class="project-category">Python Regression / Data Analysis</p>
-                    <p class="project-description">Revenue strategy for lunar solar cell production, saving millions per rover deployment</p>
-                    <div class="project-tags">
-                        <span class="project-tag">SWOT Analysis</span>
-                        <span class="project-tag">Market Sizing</span>
-                        <span class="project-tag">Research</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Blackstone: Disrupting the Industry</h3>
-                        <a href="presentations/Blackstone Presentation.pdf" target="_blank" rel="noopener" class="external-link" aria-label="View Blackstone Presentation">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                    <p class="project-category">Investment / Strategy</p>
-                    <p class="project-description">Investment disruption strategies for fractionalized real estate presented to Blackstone executives</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Investment</span>
-                        <span class="project-tag">Strategy</span>
-                        <span class="project-tag">Real Estate</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Mos: Scholarship App</h3>
-                        <a href="presentations/Mos-Presentation.pdf" target="_blank" rel="noopener" class="external-link" aria-label="View Mos Presentation">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                    <p class="project-category">GTM / Product Roadmap</p>
-                    <p class="project-description">User personas, Figma prototypes, and go-to-market strategy for scholarship app</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Product Strategy</span>
-                        <span class="project-tag">UX Design</span>
-                        <span class="project-tag">User Personas</span>
-                        <span class="project-tag">Figma</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Boston Symphony Orchestra</h3>
-                        <a href="presentations/BSO-Presentation.pdf" target="_blank" rel="noopener" class="external-link" aria-label="View BSO Presentation">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                    <p class="project-category">Competitive Benchmarking</p>
-                    <p class="project-description">Strategic recommendations for BSO cultural programming expansion presented to leadership</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Strategy</span>
-                        <span class="project-tag">Cultural Programming</span>
-                        <span class="project-tag">Stakeholder Analysis</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- Contact -->
+ <div id="panel-contact" data-tag="008" data-title="Phone">
+ <h2>iPhone</h2>
+ <p class="modal-found">Lock screen &middot; Last opened at Gate B12</p>
+ <div class="contact-content">
+ <div class="contact-info">
+ <div class="contact-item" data-copy="310-310-1619">
+ <i class="fas fa-phone"></i>
+ <span>310-310-1619</span>
+ <small class="copy-hint">click to copy</small>
+ </div>
+ <div class="contact-item" data-copy="zander-vaux.com">
+ <i class="fas fa-globe"></i>
+ <span>zander-vaux.com</span>
+ <small class="copy-hint">click to copy</small>
+ </div>
+ <div class="contact-item" data-copy="zandervaux@berkeley.edu">
+ <i class="fas fa-envelope"></i>
+ <span>zandervaux@berkeley.edu</span>
+ <small class="copy-hint">click to copy</small>
+ </div>
+ </div>
+ <div class="contact-cta">
+ <p>Want to claim this portfolio owner for your team?</p>
+ <a href="mailto:zandervaux@berkeley.edu" class="contact-button">
+ <i class="fas fa-paper-plane"></i> Send a message
+ </a>
+ </div>
+ </div>
+ </div>
 
-        <!-- Engineering -->
-        <div id="panel-engineering" data-tag="007" data-title="Blueprint">
-            <h2>Blueprint Sheet</h2>
-            <p class="modal-found">Unrolled at the workbench &middot; Berkeley M.E.T. &middot; Select a drawing to open</p>
-            <div class="blueprint-sheet blueprint-sheet--index">
-                <div class="blueprint-sheet-header">
-                    <div>
-                        <h3>DEVICE BLUEPRINTS INDEX</h3>
-                        <span class="blueprint-project-id">PROJECT: PORTFOLIO ENGINEERING</span>
-                    </div>
-                    <span>SCALE NTS · REV A · 06/15/26</span>
-                </div>
-                <div class="blueprint-grid blueprint-grid--drawings">
-                    <a href="projects/lumen.html" class="blueprint-tile blueprint-tile--numbered" data-dwg="1">
-                        <div class="blueprint-sketch blueprint-sketch--svg blueprint-sketch--isometric">
-                            <img src="images/sketches/lumen-isometric.png" alt="">
-                        </div>
-                        <span class="blueprint-tile-name">PROJECT LUMEN</span>
-                        <span class="blueprint-tile-code">DWG-LMN-001</span>
-                    </a>
-                    <a href="projects/windfrey.html" class="blueprint-tile blueprint-tile--numbered" data-dwg="2">
-                        <div class="blueprint-sketch blueprint-sketch--svg blueprint-sketch--isometric">
-                            <img src="images/sketches/wind-turbine-isometric.png" alt="">
-                        </div>
-                        <span class="blueprint-tile-name">WIND TURBINE</span>
-                        <span class="blueprint-tile-code">DWG-WND-001</span>
-                    </a>
-                    <a href="projects/fridge-opener.html" class="blueprint-tile blueprint-tile--numbered" data-dwg="3">
-                        <div class="blueprint-sketch blueprint-sketch--svg blueprint-sketch--isometric">
-                            <img src="images/sketches/fridge-opener-isometric.png" alt="">
-                        </div>
-                        <span class="blueprint-tile-name">FRIDGE OPENER</span>
-                        <span class="blueprint-tile-code">DWG-FRD-001</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+ <!-- Projects -->
+ <div id="panel-builds" data-tag="009" data-title="Travel Journal">
+ <h2>Product Development</h2>
+ <p class="modal-found">Field notes · Shipped thinking · Vintage case studies</p>
+ <div class="journal-modal">
+ <div class="journal-modal-page">
+ <a href="builds/ted-streaks.html" class="journal-entry journal-entry--modal">
+ <span class="journal-entry-stamp journal-entry-stamp--ted">TED</span>
+ <span class="journal-entry-title">Streaks</span>
+ <span class="journal-entry-desc">Habit formation feature proposal, streak systems, Duolingo benchmarking, and retention metrics for TED's learning platform.</span>
+ <span class="journal-entry-cta">open case study →</span>
+ </a>
+ <a href="https://dj.tribexr.com/ddj-flx4" class="journal-entry journal-entry--modal" target="_blank" rel="noopener">
+ <span class="journal-entry-stamp journal-entry-stamp--tribe">TRIBE</span>
+ <span class="journal-entry-title">XR Copilot</span>
+ <span class="journal-entry-desc">AI-powered DJ mentor with personalized lessons and real-time feedback. Launched on the Tribe XR web deck and scaled to 3,000+ monthly users.</span>
+ <span class="journal-entry-cta">view live product →</span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- Contact -->
-        <div id="panel-contact" data-tag="008" data-title="Phone">
-            <h2>iPhone</h2>
-            <p class="modal-found">Lock screen &middot; Last opened at Gate B12</p>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item" data-copy="310-310-1619">
-                        <i class="fas fa-phone"></i>
-                        <span>310-310-1619</span>
-                        <small class="copy-hint">click to copy</small>
-                    </div>
-                    <div class="contact-item" data-copy="zander-vaux.com">
-                        <i class="fas fa-globe"></i>
-                        <span>zander-vaux.com</span>
-                        <small class="copy-hint">click to copy</small>
-                    </div>
-                    <div class="contact-item" data-copy="zandervaux@berkeley.edu">
-                        <i class="fas fa-envelope"></i>
-                        <span>zandervaux@berkeley.edu</span>
-                        <small class="copy-hint">click to copy</small>
-                    </div>
-                </div>
-                <div class="contact-cta">
-                    <p>Want to claim this portfolio owner for your team?</p>
-                    <a href="mailto:zandervaux@berkeley.edu" class="contact-button">
-                        <i class="fas fa-paper-plane"></i> Send a message
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+ <script src="script.js"></script>
 </body>
 </html>

@@ -70,7 +70,7 @@ body.eng-doc::before {
     padding: 70px 24px 80px;
 }
 
-/* Title block — engineering drawing header */
+/* Title block,  engineering drawing header */
 .eng-title-block {
     border: 2px solid var(--bp-line);
     padding: 24px 28px;
@@ -294,7 +294,7 @@ body.eng-doc::before {
     margin-bottom: 0 !important;
 }
 
-/* Photo frame — legacy, prefer eng-integrated-figure */
+/* Photo frame,  legacy, prefer eng-integrated-figure */
 .eng-photo-frame {
     border: 1px solid rgba(255, 255, 255, 0.4);
     padding: 8px;
@@ -333,7 +333,7 @@ body.eng-doc::before {
     aspect-ratio: auto;
 }
 
-/* Prototype panels from composite — (a) left | (b) right */
+/* Prototype panels from composite,  (a) left | (b) right */
 .eng-prototype-crop {
     width: 100%;
     aspect-ratio: 512 / 660;
@@ -392,7 +392,7 @@ body.eng-doc::before {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Crop panels from composite — left to right: dashboard | journal | friends */
+/* Crop panels from composite,  left to right: dashboard | journal | friends */
 .eng-phone-crop {
     width: 100%;
     aspect-ratio: 341 / 555;

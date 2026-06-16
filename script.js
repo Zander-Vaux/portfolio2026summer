@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
             '.blueprint-sheet-header',
             '.build-card-link',
             '.journal-entry--modal',
-            '.photo-album-card'
+            '.photo-album-card',
+            '.photo-vlog-card'
         ].join(', ');
 
         modalContent.querySelectorAll(selectors).forEach(function (el, i) {
@@ -99,9 +100,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const albumCards = modalContent.querySelectorAll('.photo-album-card');
         const albumPanels = modalContent.querySelectorAll('.photo-album-detail');
+        const vlogSection = modalContent.querySelector('.photo-vlog-section');
 
         function showAlbumShelf() {
             albumsView.hidden = false;
+            if (vlogSection) vlogSection.hidden = false;
             albumPanels.forEach(function (panel) {
                 panel.hidden = true;
             });
@@ -112,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!panel) return;
 
             albumsView.hidden = true;
+            if (vlogSection) vlogSection.hidden = true;
             albumPanels.forEach(function (p) {
                 p.hidden = true;
             });

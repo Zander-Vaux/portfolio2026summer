@@ -469,7 +469,7 @@ body {
  align-self: stretch;
  width: 100%;
  height: 100%;
- max-width: 148px;
+ max-width: none;
  min-height: 0;
  padding-bottom: 16px;
 }
@@ -490,7 +490,7 @@ body {
 .item-projects:focus-within {
  z-index: 25;
 }
-.item-blueprint { grid-column: 5; grid-row: 1; transform: rotate(3deg); z-index: 3; overflow: visible; align-self: start; }
+.item-blueprint { grid-column: 4; grid-row: 2; transform: rotate(2deg); z-index: 4; overflow: visible; align-self: start; justify-self: stretch; }
 .item-boarding {
  grid-column: 2 / span 2;
  grid-row: 3;
@@ -500,9 +500,8 @@ body {
  min-height: 128px;
 }
 .item-camera { grid-column: 3; grid-row: 1 / span 2; transform: rotate(1deg); z-index: 3; }
-.item-polaroid { grid-column: 4 / span 2; grid-row: 2; transform: rotate(2deg); z-index: 3; }
 .item-passport { grid-column: 1; grid-row: 3; transform: rotate(-4deg); }
-.item-phone { grid-column: 4; grid-row: 3; transform: rotate(3deg); justify-self: end; }
+.item-phone { grid-column: 5; grid-row: 3; transform: rotate(3deg); justify-self: end; align-self: end; }
 
 .lost-item:hover .item-label,
 .lost-item:focus-visible .item-label {
@@ -522,7 +521,6 @@ body {
 .lost-item.visible .passport-cover,
 .lost-item.visible .boarding-pass,
 .lost-item.visible .boarding-pass-stack,
-.lost-item.visible .polaroid-frame,
 .lost-item.visible .blueprint-desk,
 .lost-item.visible .phone-device,
 .lost-item.visible .travel-journal,
@@ -533,7 +531,6 @@ body {
 .lost-item:hover .passport-cover,
 .lost-item:hover .boarding-pass,
 .lost-item:hover .boarding-pass-stack,
-.lost-item:hover .polaroid-frame,
 .lost-item:hover .blueprint-desk,
 .lost-item:hover .phone-device,
 .lost-item:hover .travel-journal,
@@ -541,7 +538,6 @@ body {
 .lost-item:active .passport-cover,
 .lost-item:active .boarding-pass,
 .lost-item:active .boarding-pass-stack,
-.lost-item:active .polaroid-frame,
 .lost-item:active .blueprint-desk,
 .lost-item:active .phone-device,
 .lost-item:active .travel-journal,
@@ -556,7 +552,6 @@ body {
 }
 
 .lost-item.visible .boarding-pass { animation-delay: -1.1s; animation-duration: 5.6s; }
-.lost-item.visible .polaroid-frame { animation-delay: -2.3s; animation-duration: 4.8s; }
 .lost-item.visible .blueprint-desk { animation-delay: -2.6s; animation-duration: 6s; }
 .lost-item.visible .phone-device { animation-delay: -0.4s; animation-duration: 5.8s; }
 .lost-item.item-boarding.visible .boarding-pass-stack { animation-delay: -1.8s; animation-duration: 5.4s; }
@@ -2275,6 +2270,25 @@ button.motion-reveal,
  letter-spacing: 0.06em;
 }
 
+.photo-vlog-section {
+ margin-top: 22px;
+ padding-top: 18px;
+ border-top: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+.photo-vlog-heading {
+ font-family: 'Special Elite', monospace;
+ font-size: 0.72rem;
+ letter-spacing: 0.14em;
+ text-transform: uppercase;
+ color: #a89f94;
+ margin: 0 0 12px;
+}
+
+.photo-vlog-card {
+ margin: 0;
+}
+
 .photo-album-back {
  background: none;
  border: 1px solid rgba(255, 255, 255, 0.15);
@@ -2615,12 +2629,11 @@ button.motion-reveal,
  .flatlay-plaid { display: none; }
 
  .item-projects { grid-column: 1 / span 2; grid-row: 1; min-height: 200px; }
- .item-blueprint { grid-column: 2; grid-row: 2; max-width: 140px; justify-self: end; }
  .item-camera { grid-column: 1; grid-row: 2; }
- .item-polaroid { grid-column: 1 / span 2; grid-row: 3; }
+ .item-blueprint { grid-column: 2; grid-row: 3; max-width: 140px; justify-self: end; align-self: start; }
  .item-passport { grid-column: 1; grid-row: 4; }
  .item-boarding { grid-column: 1 / span 2; grid-row: 5; min-height: 140px; }
- .item-phone { grid-column: 2; grid-row: 6; justify-self: stretch; }
+ .item-phone { grid-column: 2; grid-row: 6; justify-self: end; align-self: end; }
 
  .suitcase-stamp {
  width: 56px;
@@ -2701,7 +2714,6 @@ button.motion-reveal,
 
  .passport-cover { width: 100px; height: 136px; }
  .boarding-pass { width: 150px; }
- .polaroid-frame { width: 95px; }
 }
 
 /* Reduced motion */
@@ -2719,7 +2731,7 @@ button.motion-reveal,
  pointer-events: auto;
  }
 
- .lost-item.visible .passport-cover, .lost-item.visible .boarding-pass, .lost-item.visible .boarding-pass-stack, .lost-item.visible .polaroid-frame, .lost-item.visible .blueprint-desk, .lost-item.visible .phone-device, .lost-item.visible .travel-journal, .lost-item.visible .camera-stack, .blueprint-pencil, .suitcase-stamp, .ambient-orb, .scene-float {
+ .lost-item.visible .passport-cover, .lost-item.visible .boarding-pass, .lost-item.visible .boarding-pass-stack, .lost-item.visible .blueprint-desk, .lost-item.visible .phone-device, .lost-item.visible .travel-journal, .lost-item.visible .camera-stack, .blueprint-pencil, .suitcase-stamp, .ambient-orb, .scene-float {
  animation: none !important;
  }
 }
